@@ -149,4 +149,6 @@ return array(
     "Privacy and policy:"=> "Yksityisyys ja käytäntö:",
     "This website is provided to our B2B (Business to Business customers). Each customer is able to view order history and re-purchase previous orders."=> "Tämä verkkosivusto on tarkoitettu B2B-asiakkaillemme (Business to Business). Jokainen asiakas voi tarkastella tilaushistoriaa ja ostaa uudelleen aiempia tilauksia.",
     "We will collect your IP address"=> "Keräämme IP-osoitteesi, koneen tiedot, verkkotiedot sekä muut tarpeelliset tiedot hakkerointiyrityksen estämiseksi ja oikeudellisten toimien jatkamiseksi sekä paremman palvelun tarjoamiseksi asiakkaillemme. Emme kuitenkaan kerää tietoja käyttäjiltämme vain, jos epäonnistuneet kirjautumisyrityksesi ylittävät 3 epäonnistumista.",
+
+	"Categories"=> "Luokat",
 );?>

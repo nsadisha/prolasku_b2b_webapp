@@ -131,5 +131,7 @@ return array(
 	"pickedup"=> "Nhận hàng",
 	"cancelled"=> "Đã hủy",
 	"provided_email_is_not_correct"=> "Email được cung cấp không đúng",
-	"provided_pasword_is_not_correct"=> "Mật khẩu được cung cấp không đúng"
+	"provided_pasword_is_not_correct"=> "Mật khẩu được cung cấp không đúng",
+
+	"Categories"=> "Thể loại",
 );?>

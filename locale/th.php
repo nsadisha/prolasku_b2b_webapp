@@ -131,5 +131,7 @@ return array(
 	"pickedup"=> "หยิบขึ้น",
 	"cancelled"=> "ยกเลิก",
 	"provided_email_is_not_correct"=> "อีเมลที่ให้มาไม่ถูกต้อง",
-	"provided_pasword_is_not_correct"=> "รหัสผ่านที่ให้มาไม่ถูกต้อง"
+	"provided_pasword_is_not_correct"=> "รหัสผ่านที่ให้มาไม่ถูกต้อง",
+
+	"Categories"=> "หมวดหมู่",
 );?>

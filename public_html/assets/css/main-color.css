@@ -164,7 +164,8 @@
 .nice-select .option.focus,
 .content-404 .heading,
 .slider-opt03__layout01 .buttons .btn-thin:not(:hover),
-.nice-select .option.selected.focus {
+.nice-select .option.selected.focus,
+.category-card:hover > .name {
     color: #46b793;
 }
 

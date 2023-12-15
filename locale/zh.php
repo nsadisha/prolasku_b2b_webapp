@@ -149,4 +149,6 @@ return array(
     "Privacy and policy:"=> "隱私和政策：",
     "This website is provided to our B2B (Business to Business customers). Each customer is able to view order history and re-purchase previous orders."=> "本網站提供給我們的 B2B（企業對企業客戶）。 每個客戶都可以查看訂單歷史記錄並重新購買以前的訂單。",
     "We will collect your IP address"=> "我們將收集您的 IP 地址、機器信息、網絡信息以及其他必要信息，以阻止黑客攻擊並採取法律行動，並為我們的客戶提供更好的服務。 然而，我們不會從我們的用戶那裡收集任何信息，只有當您的登錄嘗試失敗超過 3 次時。",
+
+	"Categories"=> "类别",
 );?>

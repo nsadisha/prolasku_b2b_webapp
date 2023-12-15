@@ -131,5 +131,7 @@ return array(
 	"pickedup"=> "Recogido",
 	"cancelled"=> "Cancelado",
 	"provided_email_is_not_correct"=> "El correo electrónico proporcionado no es correcto",
-	"provided_pasword_is_not_correct"=> "La contraseña proporcionada no es correcta"
+	"provided_pasword_is_not_correct"=> "La contraseña proporcionada no es correcta",
+
+	"Categories"=> "Categorías",
 );?>

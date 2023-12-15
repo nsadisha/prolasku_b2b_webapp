@@ -141,4 +141,6 @@ return array(
     "email_needs_to_be_passed_as_an_argument_to_check_user_existance"=> "Email is required for a login attempt",
     "password_needs_to_be_passed_as_an_argument_to_get_customer_data"=> "Password needs to be provided, please enter your password！",
     "We will collect your IP address"=> "We will collect your IP address, machine information, network information as well as other necessary information to block a hack attempt and proceed with legal actions as well as providing a better service to our customers. How ever we do not collect any information from our users, only if your failed login attempts exceeds 3 failiours.",
+
+    "Categories"=> "Categories",
 );

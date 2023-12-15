@@ -131,5 +131,7 @@ return array(
 	"pickedup"=> "Paimtas",
 	"cancelled"=> "Atšauktas",
 	"provided_email_is_not_correct"=> "Pateiktas el. pašto adresas neteisingas",
-	"provided_pasword_is_not_correct"=> "Pateiktas slaptažodis neteisingas"
+	"provided_pasword_is_not_correct"=> "Pateiktas slaptažodis neteisingas",
+
+	"Categories"=> "Kategorijos",
 );?>

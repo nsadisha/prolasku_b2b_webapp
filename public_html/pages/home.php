@@ -10,19 +10,44 @@ $lang = $language['code'];
 $trans = new \Hlakioui\Trans\Trans();
 
 $categories = $cmsApi->getCategories();
-
 ?>
+
+
+<!--Hero Section-->
+<div class="hero-section categories-hero-bg" style="margin: 0;">
+    <h1 class="page-title"><?= $trans->getTrans('Categories') ?></h1>
+</div>
+
 <div id="main-content" class="main-content">
     <!--Products Block: Product Tab-->
-    <div class="sm-margin-top-193px xs-margin-top-30px">
+    <div>
         <div class="container">
-            <div class="biolife-title-box">
+            <!-- <div class="biolife-title-box">
                 <h3 class="main-title pull-left"><?= $trans->getTrans('Categories:'); ?></h3>
-            </div>
-            <div class="biolife-tab biolife-tab-contain sm-margin-top-34px">
-                    <div class="row">
+            </div> -->
+            <div class="biolife-tab biolife-tab-contain py-5">
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-3 m-0">
+                        <?php foreach($categories as $category) {
+                            $_category_name = isset($category['category_name']) ? $trans->getLang($category['category_name'], $lang) : '';
+                            if(empty($_category_name)) {continue;}
+                            $_category_img = isset($category["image"]) ? $category["image"] : '../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png';
+                            $_cid = $category['cid'];
+                            ?>
+
+                            <div class="col">
+                                <a class="category-card" href="products.php?cid=<?=$_cid?>">
+                                    <div class="img-wrapper">
+                                        <div class="rdb"></div>
+                                        <img class="img" src="<?=$_category_img?>" alt="category image">
+                                    </div>
+                                    <h4 class="name"><?=$_category_name?></h4>
+                                </a>
+                            </div>
+
+                        <?php } ?>
+                        
                         <!-- Main content -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-none">
                             <ul class="category-ul">
                                 <?php
                                 foreach ($categories as $category) {

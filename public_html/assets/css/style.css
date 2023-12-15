@@ -979,7 +979,15 @@ body {
 
 .hero-background {
     background-image: url('../images/hero_bg.jpg');
-    height: 194px;
+    /* height: 194px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.categories-hero-bg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('../images/categories_hero.jpeg'), lightgray 0px -85.667px / 100% 187.179% no-repeat;
+    /* height: 300px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -989,15 +997,21 @@ body {
     display: block;
     text-align: center;
     position: relative;
-    font-size: 0;
-    line-height: 1;
-    margin-top: 20px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+    .hero-section {
+        height: 200px;
+    }
 }
 
 .hero-section .page-title {
     display: inline-block;
     position: absolute;
-    top: 29%;
+    /* top: 29%; */
     left: 0;
     right: 0;
     font-size: 40px;
@@ -17364,3 +17378,64 @@ body.open-quickview-block .biolife-quickview-block {
 .stock_status.alert::before {
     color: orange;
 }
+
+/* ------------------------------- */
+
+.category-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.category-card .img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.category-card .img-wrapper .rdb {
+    position: absolute;
+    width: 94.5%;
+    aspect-ratio: 1 / 1;
+    top: 0;
+    left: 2.75%;
+    border: dashed 2px #46b793;
+    border-radius: 50%;
+    animation: rdb-rotate 20s linear infinite;
+}
+
+.category-card .img {
+    position: relative;
+    width: 95%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    clip-path: circle();
+    transition: 0.3s;
+}
+
+.category-card .img:hover {
+    transform: scale(0.94);
+}
+
+.category-card .name {
+    color: #222222;
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@keyframes rdb-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* #196d52 */
