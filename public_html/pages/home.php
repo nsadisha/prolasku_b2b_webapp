@@ -22,11 +22,9 @@ $categories = $cmsApi->getCategories();
     <!--Products Block: Product Tab-->
     <div>
         <div class="container">
-            <!-- <div class="biolife-title-box">
-                <h3 class="main-title pull-left"><?= $trans->getTrans('Categories:'); ?></h3>
-            </div> -->
             <div class="biolife-tab biolife-tab-contain py-5">
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-3 m-0">
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-5 m-0">
+                        <!-- Main content -->
                         <?php foreach($categories as $category) {
                             $_category_name = isset($category['category_name']) ? $trans->getLang($category['category_name'], $lang) : '';
                             if(empty($_category_name)) {continue;}
@@ -46,8 +44,8 @@ $categories = $cmsApi->getCategories();
 
                         <?php } ?>
                         
-                        <!-- Main content -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-none">
+                        
+                        <?php /*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-none">
                             <ul class="category-ul">
                                 <?php
                                 foreach ($categories as $category) {
@@ -88,7 +86,7 @@ $categories = $cmsApi->getCategories();
                                             </div>
                                         </div>
                                     </div>
-                                    <?php */ ?>
+                                    
                                     <li class="" style="">
                                         <div class="contain-category layout-default">
                                             <div class="category-thumb">
@@ -106,7 +104,7 @@ $categories = $cmsApi->getCategories();
                                 }
                                 ?>
                             </ul>
-                        </div>
+                        </div> */ ?>
 
                     </div>
                 </div>
