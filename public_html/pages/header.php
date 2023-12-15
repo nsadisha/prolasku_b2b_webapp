@@ -13,68 +13,88 @@ $trans = new \Hlakioui\Trans\Trans();
 
 <!-- HEADER -->
 <header id="header" class="header-area style-01 layout-03">
-    <div class="header-top bg-main hidden-xs" style="height: 50px;">
+    <div class="header-top bg-main py-1">
         <div class="container">
-            <div class="top-bar left">
-                <ul class="horizontal-menu">
-                    <li><a href="/"><i class="fa fa-handshake-o" aria-hidden="true"></i><?= $trans->getTrans('B2B') ?></a></li>
-                    <li><a href="tel:<?= $trans->getTrans('support_number') ?>"><i class="fa fa-phone" aria-hidden="true"></i><?= $trans->getTrans('support_number') ?></a></li>
-                    <li><a href="mailto:<?= $trans->getTrans('support_email'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?= $trans->getTrans('support_email'); ?></a></li>
-                </ul>
-            </div>
-            <?php if(isset($_SESSION['user_id'])){ ?>
-                <div class="top-bar right">
-                    <ul class="horizontal-menu">
-                        <li style="text-align:center;"><a href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> <?= $trans->getTrans('logout'); ?></a></li>
-                    </ul>
+            <div class="row align-items-center ms-0">
+                <div class="col-auto">
+                    <a href="/">
+                        <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                        <span class="d-none d-sm-inline"><?= $trans->getTrans('B2B') ?></span>
+                    </a>
                 </div>
-            <?php } ?>
-            <div class="top-bar right">
-                <ul class="horizontal-menu">
-                    <?php if(isset($_SESSION['user_id'])){ ?>
-                    <li class="horz-menu-item currency">
-                       <span><?= $cmsApi->getMainCurrency() ?></span>
-                    </li>
-                    <?php } ?>
-                    <li class="horz-menu-item lang">
-                        <select id="language"  name="language">
-                            <?php foreach ($cmsApi->getLanguages() as $language) {
-                                $select = '';
-                                if ($langId == $language['id']) {
-                                    $select = 'selected';
-                                }
-                                echo '<option '. $select .' value="' . $language['id'] . '">' . $language['descrip'] . '</option>';
+                <div class="col-auto h-100 d-none d-md-block"><div class="vr"></div></div>
+                <div class="col-auto">
+                    <a href="tel:<?= $trans->getTrans('support_number') ?>">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="d-none d-lg-inline"><?= $trans->getTrans('support_number') ?></span>
+                    </a>
+                </div>
+                <div class="col-auto h-100 d-none d-md-block"><div class="vr"></div></div>
+                <div class="col-auto">
+                    <a href="mailto:<?= $trans->getTrans('support_email'); ?>">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span class="d-none d-lg-inline"><?= $trans->getTrans('support_email'); ?></span>
+                    </a>
+                </div>
+
+                <div class="col"></div>
+
+                <div class="col-auto">
+                    <a href="#"><?= $cmsApi->getMainCurrency() ?></a>
+                </div>
+                <div class="col-auto h-100 d-none d-md-block"><div class="vr"></div></div>
+                <div class="col-auto">
+                    <select id="language"  name="language">
+                        <?php foreach ($cmsApi->getLanguages() as $language) {
+                            $select = '';
+                            if ($langId == $language['id']) {
+                                $select = 'selected';
                             }
-                            ?>
-                        </select>
-                    </li>
-                </ul>
+                            echo '<option '. $select .' value="' . $language['id'] . '">' . $language['descrip'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="col-auto h-100 d-none d-md-block"><div class="vr"></div></div>
+                <div class="col-auto">
+                    <?php if(isset($_SESSION['user_id'])){ ?>
+                        <a href="#" id="logout">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <span class="d-none d-sm-inline"><?= $trans->getTrans('logout'); ?></span>
+                        </a>
+                    <?php } ?>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="header-middle biolife-sticky-object ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-2 col-md-6 col-xs-6">
-                    <a href="/" class="biolife-logo"><img src="assets/images/logo.png" alt="logo" width="300" ></a>
-                </div>
-                <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
+    <div class="header-middle biolife-sticky-object">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container py-2 py-md-3">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/logo.png" alt="logo" width="150" >
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"><?= $trans->getTrans('Home'); ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.php"><?= $trans->getTrans('Products List'); ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.php"><?= $trans->getTrans('Order History'); ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout.php"><?= $trans->getTrans('checkout'); ?></a>
+                    </li>
+                </ul>
+                <form class="d-flex">
                     <?php if(isset($_SESSION['user_id'])){ ?>
-                    <div class="primary-menu">
-                        <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu"
-                            data-menuname="main menu">
-                            <li class="menu-item"><a href="/"><?= $trans->getTrans('Home'); ?></a></li>
-                            <li class="menu-item"><a href="products.php"><?= $trans->getTrans('Products List'); ?></a></li>
-                            <li class="menu-item"><a href="orders.php"><?= $trans->getTrans('Order History'); ?></a></li>
-                            <li class="menu-item"><a href="checkout.php"><?= $trans->getTrans('checkout'); ?></a></li>
-                        </ul>
-                    </div>
-                    <?php } ?>
-                </div>
-                <div class="col-lg-3 col-md-3 col-md-6 col-xs-6">
-                    <?php if(isset($_SESSION['user_id'])){ ?>
-                    <div class="biolife-cart-info">
+                    <div class="biolife-cart-info mx-auto">
                         <div class="minicart-block">
                             <div class="minicart-contain">
                                 <a href="javascript:void(0)" class="link-to">
@@ -100,8 +120,9 @@ $trans = new \Hlakioui\Trans\Trans();
                         </div>
                     </div>
                     <?php } ?>
+                </form>
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
 </header>

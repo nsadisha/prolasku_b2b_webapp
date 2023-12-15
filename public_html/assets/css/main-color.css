@@ -159,6 +159,7 @@
 .minicart-item .left-info .product-name:hover,
 .header-area .primary-menu > ul > li.has-child:hover > a::after,
 .header-area .primary-menu > ul > li:hover > a,
+.header-area .header-middle .navbar .navbar-nav .nav-item:hover > a,
 .nice-select .option:hover,
 .nice-select .option.focus,
 .content-404 .heading,
