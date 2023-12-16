@@ -19,7 +19,7 @@
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center pb-5">
                 <!--Form Sign In-->
                 <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                     <div class="signin-container">
@@ -81,8 +81,9 @@
 <div class="container my-5">
     <div class="row row-cols-1 row-cols-md-3 gy-3">
         <div class="col">
-            <div class="card">
-                <div class="card-body">
+            <div class="card py-3">
+                <div class="card-body text-center">
+                    <i class="fa fa-user mb-3" style="font-size: 5rem;" aria-hidden="true"></i>
                     <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Are you a private customer?') ?></strong></h6>
                     <p class="card-text"><?= $trans->getTrans('Please login to our webshop') ?></p>
                     <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a>
@@ -90,8 +91,9 @@
             </div>
         </div>
         <div class="col">
-            <div class="card">
-                <div class="card-body">
+            <div class="card py-3">
+                <div class="card-body text-center">
+                    <i class="fa fa-handshake-o mb-3" style="font-size: 5rem;" aria-hidden="true"></i>
                     <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Interested in a B2B Registration?') ?></strong></h6>
                     <p class="card-text"><?= $trans->getTrans('Please fill our online business registration form') ?></p>
                     <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a>
@@ -99,8 +101,9 @@
             </div>
         </div>
         <div class="col">
-            <div class="card">
-                <div class="card-body">
+            <div class="card py-3">
+                <div class="card-body text-center">
+                    <i class="fa fa-question-circle-o mb-3" style="font-size: 5rem;" aria-hidden="true"></i>
                     <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Already a B2B customer but you cannot login?') ?></strong></h6>
                     <p class="card-text"><?= $trans->getTrans('Please send us an inquiry here or contact us via our phone: 0931588830') ?></p>
                     <!-- <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a> -->
@@ -109,20 +112,22 @@
         </div>
     </div>
 
-    <div class="row row-cols-1 mt-3 gy-3">
+    <div class="row row-cols-1 mt-3 gy-4">
         <div class="col">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body text-center">
+                    <i class="fa fa-exclamation-triangle mb-3" style="font-size: 5rem;" aria-hidden="true"></i>
                     <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Disclaimers:') ?></strong></h6>
-                    <p class="card-text" style="color: #c0392b"><?= $trans->getTrans('This website is provided to our B2B (Business to Business customers). Each customer is able to view order history and re-purchase previous orders.') ?></p>
+                    <p class="card-text"><?= $trans->getTrans('This website is provided to our B2B (Business to Business customers). Each customer is able to view order history and re-purchase previous orders.') ?></p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body text-center">
+                    <i class="fa fa-user-secret mb-3" style="font-size: 5rem;" aria-hidden="true"></i>
                     <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Privacy and policy:') ?></strong></h6>
-                    <p class="card-text" style="color: #c0392b"><?= $trans->getTrans('We will collect your IP address') ?></p>
+                    <p class="card-text"><?= $trans->getTrans('We will collect your IP address') ?></p>
                 </div>
             </div>
         </div>
