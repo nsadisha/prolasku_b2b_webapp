@@ -603,7 +603,41 @@
         }
     }
 
+    $('#tiles-4-btn').on('click', function(e){
+        const products = document.querySelector('.products-list');
+        products.classList.remove('row-cols-xl-4', 'row-cols-xl-3');
+        products.classList.add('row-cols-xl-2');
+        
+        makeActiveTile('#tiles-4-btn');
+    })
 
+    $('#tiles-9-btn').on('click', function(){
+        const products = document.querySelector('.products-list');
+        products.classList.remove('row-cols-xl-4', 'row-cols-xl-2');
+        products.classList.add('row-cols-xl-3');
+
+        makeActiveTile('#tiles-9-btn');
+    })
+
+    $('#tiles-16-btn').on('click', function(){
+        const products = document.querySelector('.products-list');
+        products.classList.remove('row-cols-xl-3', 'row-cols-xl-2');
+        products.classList.add('row-cols-xl-4');
+
+        makeActiveTile('#tiles-16-btn');
+    })
+
+    function removeAllActiveTiles() {
+        const btns = document.querySelectorAll('#tiles-4-btn, #tiles-9-btn, #tiles-16-btn');
+        btns.forEach(btn => { btn.classList.remove('active') })
+    }
+
+    function makeActiveTile(id){
+        removeAllActiveTiles()
+
+        const btn = document.querySelector(id);
+        btn.classList.add('active')
+    }
 
 })(jQuery);
 </script>

@@ -4056,7 +4056,7 @@ body.open-overlay #overlay {
     font-size: 14px;
     line-height: 34px;
     padding: 0;
-    color: #444444;
+    color: #222222;
 }
 
 .sidebar .wgt-content .check-list.bold li {
@@ -4070,7 +4070,7 @@ body.open-overlay #overlay {
 }
 
 .sidebar .wgt-content .check-list li a {
-    padding-left: 30px;
+    padding-left: 22px;
     position: relative;
     display: inline-block;
 }
@@ -17439,4 +17439,129 @@ body.open-quickview-block .biolife-quickview-block {
     }
 }
 
-/* #196d52 */
+.product-card.layout-1 {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+}
+
+.product-card.layout-1 .image-link {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.product-card.layout-1 .image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.product-card:hover .image {
+    transform: scale(1.05);
+}
+
+.product-card .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.product-card .name {
+    color: #222222;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    line-height: 100%;
+}
+
+.product-card .price {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product-card .price del {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.product-card.layout-1 .btns .add-to-cart-btn {
+    width: 80%;
+    text-transform: uppercase;
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    border: solid 2px #cccccc;
+}
+
+
+
+/* tile btns */
+.tile-btns {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: solid 1px #aaaaaa;
+    border-radius: 5000px;
+    width: fit-content;
+}
+
+.tile-btns button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.tiles-4,
+.tiles-6,
+.tiles-9,
+.tiles-16 {
+    display: grid;
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+    gap: 1.3px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.tiles-4 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.tiles-6 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.tiles-9 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tiles-16 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tiles-4 div,
+.tiles-6 div,
+.tiles-9 div,
+.tiles-16 div {
+    width: 100%;
+    width: 100%;
+    background-color: #aaaaaa;
+}
+
+.active .tiles-4 div,
+.active .tiles-6 div,
+.active .tiles-9 div,
+.active .tiles-16 div {
+    background-color: #196d52;
+}

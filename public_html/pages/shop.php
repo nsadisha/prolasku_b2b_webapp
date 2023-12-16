@@ -10,14 +10,41 @@ $brands = $cmsApi->getBrands();
 $trans = new \Hlakioui\Trans\Trans();
 
 ?>
+
+<!--Hero Section-->
+<div class="hero-section categories-hero-bg" style="margin: 0;">
+    <h1 class="page-title"><?= $trans->getTrans('Products List'); ?></h1>
+</div>
+
+<div class="container py-3 py-md-4" style="border-bottom: solid 1px #aaaaaa;">
+    <div class="row align-items-center gy-3">
+        <div class="col-auto">Showing results of <?= sizeof($products); ?> </div>
+        <div class="col"></div>
+        <div class="col-auto">
+            <!-- <div class="tile-btns layout">
+                <button id="layout-4-btn" class="active"><?= four_tiles(); ?></button>
+                <button id="layout-6-btn"><?= six_tiles(); ?></button>
+            </div> -->
+        </div>
+        <div class="col-auto d-none d-xl-block">
+            <div class="tile-btns tile">
+                <button id="tiles-4-btn"><?= four_tiles(); ?></button>
+                <button id="tiles-9-btn"><?= nine_tiles(); ?></button>
+                <button id="tiles-16-btn" class="active"><?= sixteen_tiles(); ?></button>
+            </div>
+        </div>
+        <div class="col-auto d-block d-lg-none">
+            <button class="btn filter-toggle btn-toggle" data-object="open-mobile-filter">
+                <i class="fa fa-filter" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
 <div id="main-content" class="main-content">
     <!--Products Block: Product Tab-->
-    <div class="product-tab z-index-20 sm-margin-top-193px xs-margin-top-30px">
+    <div class="product-tab z-index-20 xs-margin-top-30px mt-3">
         <div class="container">
-            <div class="biolife-title-box">
-                <span class="subtitle"></span>
-                <h3 class="main-title"><?= $trans->getTrans('Products List'); ?></h3>
-            </div>
             <div class="biolife-tab biolife-tab-contain sm-margin-top-34px">
                 <div class="tab-content">
                     <div class="row">
@@ -30,8 +57,9 @@ $trans = new \Hlakioui\Trans\Trans();
                             <div class="sidebar-contain">
                                 <div class="widget biolife-filter">
                                     <div class="wgt-content">
-                                        <label class="wgt-title form-label" for="search"><?= $trans->getTrans('Product Search:');  ?></label>
-                                        <input class="product-search form-control" type="text" name="search" id="search">
+                                        <!-- <label class="wgt-title form-label" for="search"><?= $trans->getTrans('Product Search:');  ?></label> -->
+                                        <input class="product-search form-control" type="text" 
+                                        name="search" id="search" placeholder="<?=$trans->getTrans('Product Search:');?>">
                                     </div>
                                 </div>
                                 <div class="widget biolife-filter ">
@@ -44,7 +72,7 @@ $trans = new \Hlakioui\Trans\Trans();
                                                     ?>
                                                     <li class="check-list-item <?=isset($_GET['cid'])&&$_GET['cid']==$category['cid']?'selected':''?>"
                                                         data-id="<?php echo $category['cid'] ?>">
-                                                        <a href="#"
+                                                        <a href="#" style="text-decoration: none; font-weight:600;"
                                                            class="check-link"><?=$trans->getLang($category['category_name'], $lang) ?></a>
                                                     </li>
                                                     <?php
@@ -64,7 +92,7 @@ $trans = new \Hlakioui\Trans\Trans();
                                                     ?>
                                                     <li class="check-list-item"
                                                         data-id="<?php echo $brand['bid'] ?>">
-                                                        <a href="#"
+                                                        <a href="#" style="text-decoration: none; font-weight:600;"
                                                            class="check-link"><?=$trans->getLang($brand['brand_name'], $lang) ?></a>
                                                     </li>
                                                     <?php
@@ -80,11 +108,9 @@ $trans = new \Hlakioui\Trans\Trans();
                             </div>
                         </aside>
                         <!-- Main content -->
-                        <div id="main-content" class="main-content col-lg-9 col-md-8 col-sm-12 col-xs-12">
-                            <div class="row products-list nav-center-02 nav-none-on-mobile eq-height-contain">
-                                <?php 
-                                include('pages/product_blocks.php');
-                                ?>
+                        <div id="main-content" class="main-content col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row products-list row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gy-3">
+                                <?php include('pages/product_blocks.php'); ?>
                             </div>
                         </div>
 
@@ -92,9 +118,9 @@ $trans = new \Hlakioui\Trans\Trans();
                 </div>
 
                 <div class="row">
-                    <div class="offset-lg-3 offset-md-4 col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    <div class="offset-lg-3 col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <div class="pagination__next" style="text-align: center;margin: 35px 0;">
-                            <button id="product-load-more" class="btn btn-primary pagination__next"><?= $trans->getTrans('Load More'); ?></button>
+                            <button id="product-load-more" class="btn btn-submit btn-bold px-4"><?= $trans->getTrans('Load More'); ?></button>
                         </div>
                     </div>
                 </div>
@@ -102,3 +128,24 @@ $trans = new \Hlakioui\Trans\Trans();
         </div>
     </div>
 </div>
+
+
+<?php
+
+    function four_tiles(){
+        return "<div class='tiles-4'><div></div><div></div><div></div><div></div></div>";
+    }
+
+    function six_tiles(){
+        return "<div class='tiles-6'><div></div><div></div><div></div><div></div><div></div><div></div></div>";
+    }
+
+    function nine_tiles(){
+        return "<div class='tiles-9'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
+    }
+
+    function sixteen_tiles(){
+        return "<div class='tiles-16'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
+    }
+
+?>
