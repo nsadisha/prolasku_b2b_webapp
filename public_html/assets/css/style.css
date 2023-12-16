@@ -17565,3 +17565,119 @@ body.open-quickview-block .biolife-quickview-block {
 .active .tiles-16 div {
     background-color: #196d52;
 }
+
+.year-selector {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.year-selector a {
+    text-decoration: none;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-selector a:nth-child(2) {
+    background-color: #196d52;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    color: white;
+}
+
+.year-selector a:first-child,
+.year-selector a:last-child {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: solid 1px #aaaaaa;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.year-selector a:first-child:hover,
+.year-selector a:last-child:hover {
+    background-color: #196d52;
+    color: white;
+}
+
+
+.order-card .top a{
+    color: #222222;
+    font-weight: 600 !important;
+    transition: 0.2s;
+}
+
+.order-card .top a:hover {
+    color: #46b793;
+}
+
+.order-card .price {
+    color: #222222;
+    font-size: 1.2rem;
+}
+
+
+.custom-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-dropdown .label {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+.custom-dropdown .label::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.custom-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: auto;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 100%;
+    z-index: 100;
+}
+
+.custom-dropdown ul li{
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.custom-dropdown ul li.active {
+    background-color: #196d52;
+}
+.custom-dropdown ul li.active a {
+    color: white;
+}
+
+.custom-dropdown ul li a{
+    text-decoration: none;
+    color: #222222;
+    width: 100%;
+}
+
+.custom-dropdown ul li a:hover {
+    color: #46b793;
+}
+
+.custom-dropdown:hover ul {
+    display: block;
+}
