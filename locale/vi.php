@@ -134,4 +134,5 @@ return array(
 	"provided_pasword_is_not_correct"=> "Mật khẩu được cung cấp không đúng",
 
 	"Categories"=> "Thể loại",
+	"Login"=>"Đăng nhập",
 );?>

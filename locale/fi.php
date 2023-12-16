@@ -151,4 +151,5 @@ return array(
     "We will collect your IP address"=> "Keräämme IP-osoitteesi, koneen tiedot, verkkotiedot sekä muut tarpeelliset tiedot hakkerointiyrityksen estämiseksi ja oikeudellisten toimien jatkamiseksi sekä paremman palvelun tarjoamiseksi asiakkaillemme. Emme kuitenkaan kerää tietoja käyttäjiltämme vain, jos epäonnistuneet kirjautumisyrityksesi ylittävät 3 epäonnistumista.",
 
 	"Categories"=> "Luokat",
+	"Login"=>"Kirjaudu sisään",
 );?>

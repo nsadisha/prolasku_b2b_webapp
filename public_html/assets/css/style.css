@@ -17269,7 +17269,7 @@ body.open-quickview-block .biolife-quickview-block {
 }
 
 .row {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .toast {
@@ -17433,6 +17433,7 @@ body.open-quickview-block .biolife-quickview-block {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }

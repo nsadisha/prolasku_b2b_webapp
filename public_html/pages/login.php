@@ -19,11 +19,12 @@
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <!--Form Sign In-->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                     <div class="signin-container">
                         <form id="login-form" name="frm-login" method="post">
+                            <h2 class="my-0 mb-4"><?= $trans->getTrans('Login') ?></h2>
                             <p class="form-row">
                                 <label for="fid-email"><?= $trans->getTrans('Email Address:') ?><span class="requite">*</span></label>
                                 <input type="text" id="fid-email" name="email" value="" class="txt-input" required>
@@ -42,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row d-none">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <p><strong><?= $trans->getTrans('Are you a private customer?') ?></strong></p>
 
@@ -77,6 +78,53 @@
     </div>
 </div>
 
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 gy-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Are you a private customer?') ?></strong></h6>
+                    <p class="card-text"><?= $trans->getTrans('Please login to our webshop') ?></p>
+                    <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Interested in a B2B Registration?') ?></strong></h6>
+                    <p class="card-text"><?= $trans->getTrans('Please fill our online business registration form') ?></p>
+                    <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Already a B2B customer but you cannot login?') ?></strong></h6>
+                    <p class="card-text"><?= $trans->getTrans('Please send us an inquiry here or contact us via our phone: 0931588830') ?></p>
+                    <!-- <a href="../" class="card-link"><?= $trans->getTrans('here') ?></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
+    <div class="row row-cols-1 mt-3 gy-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Disclaimers:') ?></strong></h6>
+                    <p class="card-text" style="color: #c0392b"><?= $trans->getTrans('This website is provided to our B2B (Business to Business customers). Each customer is able to view order history and re-purchase previous orders.') ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong><?= $trans->getTrans('Privacy and policy:') ?></strong></h6>
+                    <p class="card-text" style="color: #c0392b"><?= $trans->getTrans('We will collect your IP address') ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

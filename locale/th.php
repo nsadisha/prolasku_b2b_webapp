@@ -134,4 +134,5 @@ return array(
 	"provided_pasword_is_not_correct"=> "รหัสผ่านที่ให้มาไม่ถูกต้อง",
 
 	"Categories"=> "หมวดหมู่",
+	"Login"=>"เข้าสู่ระบบ",
 );?>

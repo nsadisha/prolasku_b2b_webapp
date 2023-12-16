@@ -134,4 +134,5 @@ return array(
 	"provided_pasword_is_not_correct"=> "رمز عبور ارائه شده صحیح نیست",
 
 	"Categories"=> "دسته بندی ها",
+	"Login"=>"وارد شدن",
 );?>

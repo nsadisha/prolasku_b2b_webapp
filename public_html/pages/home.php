@@ -23,7 +23,7 @@ $categories = $cmsApi->getCategories();
     <div>
         <div class="container">
             <div class="biolife-tab biolife-tab-contain py-5">
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-5 m-0">
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-5">
                         <!-- Main content -->
                         <?php foreach($categories as $category) {
                             $_category_name = isset($category['category_name']) ? $trans->getLang($category['category_name'], $lang) : '';

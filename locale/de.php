@@ -134,4 +134,5 @@ return array(
 	"provided_pasword_is_not_correct"=> "Das angegebene Passwort ist nicht korrekt",
 
 	"Categories"=> "Kategorien",
+	"Login"=>"Anmeldung",
 );?>
