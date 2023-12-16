@@ -16,7 +16,7 @@ $trans = new \Hlakioui\Trans\Trans();
     <h1 class="page-title"><?= $trans->getTrans('Products List'); ?></h1>
 </div>
 
-<div class="container py-3 py-md-4" style="border-bottom: solid 1px #aaaaaa;">
+<div class="container py-3 py-md-4 bg-white" style="border-bottom: solid 1px #aaaaaa;">
     <div class="row align-items-center gy-3">
         <div class="col-auto">Showing results of <?= sizeof($products); ?> </div>
         <div class="col"></div>
@@ -34,16 +34,16 @@ $trans = new \Hlakioui\Trans\Trans();
             </div>
         </div>
         <div class="col-auto d-block d-lg-none">
-            <button class="btn filter-toggle btn-toggle" data-object="open-mobile-filter">
+            <button class="btn" id="mobile-filter-toggle" data-object="open-mobile-filter">
                 <i class="fa fa-filter" aria-hidden="true"></i>
             </button>
         </div>
     </div>
 </div>
 
-<div id="main-content" class="main-content">
+<div id="main-content" class="main-content" style="z-index: 101;">
     <!--Products Block: Product Tab-->
-    <div class="product-tab z-index-20 xs-margin-top-30px mt-3">
+    <div class="product-tab xs-margin-top-30px mt-3">
         <div class="container">
             <div class="biolife-tab biolife-tab-contain sm-margin-top-34px">
                 <div class="tab-content">

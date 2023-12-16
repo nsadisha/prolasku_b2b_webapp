@@ -539,6 +539,9 @@
             $(".brands .check-list-item.selected").each(function () {
                 brandIDs[j++] = $($(this).data('id'));
             });
+
+            $body.trigger('close-overlay', ['open-mobile-filter']);
+
             $.ajax({
                 type: "POST",
                 url: "get-product.php",
@@ -651,6 +654,11 @@
         
         const quantity = document.querySelector('#pd-quantity');
         quantity.stepDown()
+    })
+
+    $('#mobile-filter-toggle').on('click', function() {
+        $('body').trigger('open-overlay', ['open-mobile-filter']);
+
     })
 
 })(jQuery);

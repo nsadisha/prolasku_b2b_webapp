@@ -13397,7 +13397,7 @@ body.open-quickview-block .biolife-quickview-block {
     }
 
     #sidebar .sidebar-contain {
-        display: inline-block;
+        /* display: inline-block; */
         padding: 30px 15px 0;
         height: calc(100% - 50px);
         overflow-y: auto;
