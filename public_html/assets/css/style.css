@@ -4855,8 +4855,8 @@ body.open-overlay #overlay {
 
 .sumary-product .media {
     display: inline-block;
-    float: left;
-    width: 38.462%;
+    /* float: left; */
+    width: 100%;
 }
 
 .sumary-product .media ul {
@@ -4888,18 +4888,18 @@ body.open-overlay #overlay {
 }
 
 .sumary-product .product-attribute {
-    display: inline-block;
-    float: left;
-    width: calc(100% - 38.462% - 270px);
-    padding-left: 20px;
-    padding-top: 13px;
+    /* display: inline-block; */
+    /* float: left; */
+    /* width: calc(100% - 38.462% - 270px); */
+    /* padding-left: 20px; */
+    /* padding-top: 13px; */
 }
 
 .sumary-product .product-attribute .title {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 24px;
     color: #222222;
-    font-weight: 600;
+    font-weight: 700;
     display: block;
     margin: 0;
     max-width: 329px;
@@ -5044,19 +5044,18 @@ body.open-overlay #overlay {
 }
 
 .sumary-product .action-form {
-    display: inline-block;
-    width: 270px;
-    background-color: #f3f3f3;
-    padding: 11px 20px 34px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.sumary-product .action-form .title {
+/* .sumary-product .action-form .title {
     font-size: 15px;
     color: #222222;
     font-weight: 600;
     display: block;
     margin-bottom: 3px;
-}
+} */
 
 .quantity-box .qty-input,
 .sumary-product .action-form .qty-input {
@@ -5119,9 +5118,9 @@ body.open-overlay #overlay {
 .sumary-product .action-form .buttons {
     display: block;
     text-align: center;
-    border-top: 2px solid #e6e6e6;
-    margin-top: 17px;
-    padding-top: 20px;
+    /* border-top: 2px solid #e6e6e6; */
+    /* margin-top: 17px; */
+    /* padding-top: 20px; */
 }
 
 .sumary-product .action-form .buttons .add-to-cart-btn {
@@ -5133,7 +5132,7 @@ body.open-overlay #overlay {
     display: block;
     border-radius: 999px;
     border: none;
-    padding: 12px 10px 11px;
+    padding: 8px 20px 8px;
 }
 
 .sumary-product .action-form .buttons .add-to-cart-btn:hover {
@@ -13291,12 +13290,12 @@ body.open-quickview-block .biolife-quickview-block {
     }
 
     .sumary-product .product-attribute {
-        width: 50%;
+        width: 100%;
         padding-right: 0;
     }
 
     .sumary-product .media {
-        width: 50%;
+        width: 100%;
     }
 
     .sumary-product .action-form {
@@ -17601,6 +17600,21 @@ body.open-quickview-block .biolife-quickview-block {
 .year-selector a:last-child:hover {
     background-color: #196d52;
     color: white;
+}
+
+.year-selector .input-element::-webkit-inner-spin-button,
+.year-selector .input-element::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ .year-selector .input-element {
+    width: fit-content;
+    padding: 0.4rem 0.7rem;
+    text-align: center;
+    border: solid 1px #aaaaaa;
+    border-radius: 100px;
+    background-color: transparent;
 }
 
 

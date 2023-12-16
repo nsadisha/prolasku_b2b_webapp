@@ -862,7 +862,7 @@ class CmsApi
         if(!$found_default_location){
             $str .= '<span class="">'.$trans->getTrans('no stock available').'"</span>';
         } 
-        if(!empty($str)) $str = '<div class="bold m-t-sm p-t-sm">'.$trans->getTrans('availibility').':</div>' . $str;
+        if(!empty($str)) $str = '<div class="bold m-t-sm">'.$trans->getTrans('availibility').':</div>' . $str;
 
         return $str;      
     } 

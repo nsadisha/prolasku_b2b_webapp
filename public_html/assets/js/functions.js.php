@@ -639,5 +639,19 @@
         btn.classList.add('active')
     }
 
+    $('#pd-q-up').on('click', function(e){
+        e.preventDefault();
+        
+        const quantity = document.querySelector('#pd-quantity');
+        quantity.stepUp()
+    })
+
+    $('#pd-q-down').on('click', function(e){
+        e.preventDefault();
+        
+        const quantity = document.querySelector('#pd-quantity');
+        quantity.stepDown()
+    })
+
 })(jQuery);
 </script>
