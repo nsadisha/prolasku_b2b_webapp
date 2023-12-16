@@ -22,6 +22,8 @@
         $cat_scrollbar = $('.cat_scrollbar'),
         $brand_scrollbar = $('.brand_scrollbar');
 
+    let typingTimer;
+
     function IS_JSON(str){
         var IS_JSON_str = true;
         try
@@ -525,8 +527,16 @@
             });
         })
 
-        $('.filter').on('click', function () {
-            const search = $('.product-search').val();
+        $('.filter').on('click', filter)
+
+        $('#filter-form').on('input', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(filter, 1000);
+        })
+    }
+
+    function filter() {
+        const search = $('.product-search').val();
 
             const catIDs = new Array();
             let i = 0;
@@ -565,7 +575,6 @@
                     products.append("Error try again");
                 }
             });
-        })
     }
 
     $('.is-different-address').on('change', function () {

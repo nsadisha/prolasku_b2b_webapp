@@ -1,6 +1,6 @@
 <?php 
 foreach ($products as $product) { ?>
-    <div class="col">
+    <div class="col" style="transition: 0.2s;">
         <div class="product-card layout-1">
             <a href="single-product.php?id=<?php echo $product['pid'] ?>" class="image-link">
                 <?php

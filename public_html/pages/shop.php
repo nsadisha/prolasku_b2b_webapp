@@ -52,58 +52,60 @@ $trans = new \Hlakioui\Trans\Trans();
                         <aside id="sidebar" class="sidebar col-lg-3 col-md-4 col-sm-12 col-xs-12">
                             <div class="biolife-mobile-panels">
                                 <span class="biolife-current-panel-title"><?= $trans->getTrans('Sidebar'); ?></span>
-                                <a class="biolife-close-btn" href="#" data-object="open-mobile-filter">&times;</a>
+                                <a class="biolife-close-btn" href="#" data-object="open-mobile-filter" style="text-decoration: none;">&times;</a>
                             </div>
                             <div class="sidebar-contain">
-                                <div class="widget biolife-filter">
-                                    <div class="wgt-content">
-                                        <!-- <label class="wgt-title form-label" for="search"><?= $trans->getTrans('Product Search:');  ?></label> -->
-                                        <input class="product-search form-control" type="text" 
-                                        name="search" id="search" placeholder="<?=$trans->getTrans('Product Search:');?>">
+                                <form id="filter-form">
+                                    <div class="widget biolife-filter">
+                                        <div class="wgt-content">
+                                            <!-- <label class="wgt-title form-label" for="search"><?= $trans->getTrans('Product Search:');  ?></label> -->
+                                            <input class="product-search form-control" type="text" 
+                                            name="search" id="search" placeholder="<?=$trans->getTrans('Product Search:');?>">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="widget biolife-filter ">
-                                    <h4 class="wgt-title"><?= $trans->getTrans('Categories:'); ?> </h4>
-                                    <div class="wgt-content cat_scrollbar"
-                                         style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
-                                        <ul class="categories check-list multiple">
-                                            <?php foreach ($categories as $category) {
-                                                if (isset($category['category_name'])) {
-                                                    ?>
-                                                    <li class="check-list-item <?=isset($_GET['cid'])&&$_GET['cid']==$category['cid']?'selected':''?>"
-                                                        data-id="<?php echo $category['cid'] ?>">
-                                                        <a href="#" style="text-decoration: none; font-weight:600;"
-                                                           class="check-link"><?=$trans->getLang($category['category_name'], $lang) ?></a>
-                                                    </li>
-                                                    <?php
+                                    <div class="widget biolife-filter ">
+                                        <h4 class="wgt-title"><?= $trans->getTrans('Categories:'); ?> </h4>
+                                        <div class="wgt-content cat_scrollbar"
+                                            style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
+                                            <ul class="categories check-list multiple">
+                                                <?php foreach ($categories as $category) {
+                                                    if (isset($category['category_name'])) {
+                                                        ?>
+                                                        <li class="check-list-item <?=isset($_GET['cid'])&&$_GET['cid']==$category['cid']?'selected':''?>"
+                                                            data-id="<?php echo $category['cid'] ?>">
+                                                            <a href="#" style="text-decoration: none; font-weight:600;"
+                                                            class="check-link"><?=$trans->getLang($category['category_name'], $lang) ?></a>
+                                                        </li>
+                                                        <?php
+                                                    }
                                                 }
-                                            }
-                                            ?>
-                                        </ul>
+                                                ?>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="widget biolife-filter scrollbar">
-                                    <h4 class="wgt-title"><?= $trans->getTrans('Brands:'); ?> </h4>
-                                    <div class="wgt-content brand_scrollbar"
-                                         style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
-                                        <ul class="brands check-list multiple">
-                                            <?php foreach ($brands as $brand) {
-                                                if (isset($brand['brand_name'])) {
-                                                    ?>
-                                                    <li class="check-list-item"
-                                                        data-id="<?php echo $brand['bid'] ?>">
-                                                        <a href="#" style="text-decoration: none; font-weight:600;"
-                                                           class="check-link"><?=$trans->getLang($brand['brand_name'], $lang) ?></a>
-                                                    </li>
-                                                    <?php
+                                    <div class="widget biolife-filter scrollbar pb-0">
+                                        <h4 class="wgt-title"><?= $trans->getTrans('Brands:'); ?> </h4>
+                                        <div class="wgt-content brand_scrollbar"
+                                            style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
+                                            <ul class="brands check-list multiple">
+                                                <?php foreach ($brands as $brand) {
+                                                    if (isset($brand['brand_name'])) {
+                                                        ?>
+                                                        <li class="check-list-item"
+                                                            data-id="<?php echo $brand['bid'] ?>">
+                                                            <a href="#" style="text-decoration: none; font-weight:600;"
+                                                            class="check-link"><?=$trans->getLang($brand['brand_name'], $lang) ?></a>
+                                                        </li>
+                                                        <?php
+                                                    }
                                                 }
-                                            }
-                                            ?>
-                                        </ul>
+                                                ?>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                                 <div class="widget biolife-filter">
-                                    <button class="btn btn-primary filter"><?= $trans->getTrans('Filter'); ?></button>
+                                    <button class="btn btn-primary btn-bold w-100 filter"><?= $trans->getTrans('Filter'); ?></button>
                                 </div>
                             </div>
                         </aside>
