@@ -30,51 +30,6 @@ $trans = new \Hlakioui\Trans\Trans();
     <div id="main-content" class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="orders-filter">
-                        <div class="orders-years d-none">
-                            <?php
-                                $current = new DateTime();
-                                $year = $current->format('Y');
-                                $month = $current->format('m');
-                                if (isset($_GET['y'])) {
-                                    $year = $_GET['y'];
-                                }
-
-                                if (isset($_GET['m'])) {
-                                    $month = $_GET['m'];
-                                }
-
-                                $lastYear = new DateTime($year . '-01-01');
-                                $lastYear->modify('- 1 year');
-
-                                $nextYear = new DateTime($year . '-01-01');
-                                $nextYear->modify('+ 1 year');
-                            ?>
-                            <a href="orders.php?y=<?php echo $lastYear->format("Y"); ?>" class="btn btn-primary last-year"><?php echo $lastYear->format('Y'); ?></a>
-                            <a href="orders.php?y=<?php echo $year; ?>" class="btn btn-primary next-year"><?php echo $year; ?></a>
-                            <a href="orders.php?y=<?php echo $nextYear->format('Y'); ?>" class="btn btn-primary current-year"><?php echo $nextYear->format('Y'); ?></a>
-                        </div>
-                        <ul class="order-filter-list list-inline d-none">
-                            <?php
-                            $begin = (new DateTime($year . '-01-01'))->modify('first day of january');
-                            $end = (new DateTime($year . '-01-01'))->modify('last day of December');
-
-                            $interval = DateInterval::createFromDateString('1 month');
-                            $period = new DatePeriod($begin, $interval, $end);
-
-                            foreach ($period as $dt) {
-                                ?>
-                                <li class="list<?php $dt->format('Y-m') == (new DateTime($year . '-' . $month . '-01'))->format('Y-m') ? print ' active' : print '' ?>">
-                                    <a href="orders.php?m=<?php echo $dt->format("m"); ?>&y=<?php echo $dt->format("Y"); ?>"><?php echo $dt->format("M-Y"); ?></a>
-                                </li>
-                                <?php
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="col-12">
                     <div class="d-flex justify-content-center justify-content-md-end">
                         <?php
@@ -164,28 +119,6 @@ $trans = new \Hlakioui\Trans\Trans();
                                                     <p class="card-text"><?php echo $order['order_date'] ?? '' ?></p>
                                                 </div>
                                                 <span class="price"><strong><?= $cur ?><?= $order['total'] ?? '' ?></strong></span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-item p-2 d-none">
-                                            <div class="contain-product right-info-layout contain-product__right-info-layout">
-                                                <div class="info" style="position: relative;">
-                                                    <h4 class="product-title">
-                                                        <a href="order.php?id=<?php echo $order['id'] ?>" class="bold pr-name">#<?php echo $order['id'] ?? '' ?></a>
-                                                        <span class="p-l-sm text-<?=$_ORDER_STATUS_DATA['color']?>"><?=$trans->getTrans($_ORDER_STATUS_DATA['title'])?></span>
-                                                    </h4>
-                                                    <div class="price" style="position: absolute;top: 0;right: 10px;">
-                                                        <ins>
-                                                            <span class="price-amount">
-                                                                <span class="currencySymbol"><?= $cur ?></span>
-                                                                <?php echo $order['total'] ?? '' ?>
-                                                            </span>
-                                                        </ins>
-                                                    </div>
-                                                    <div class="rating">
-                                                        <span class="review-count"><?php echo $order['order_date'] ?? '' ?></span>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <?php
