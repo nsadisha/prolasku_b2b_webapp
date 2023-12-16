@@ -27,7 +27,7 @@ if(isset($customer['available_payment_methods']) && !empty($customer['available_
 
 
 <!--Navigation section-->
-<div class="container">
+<div class="container d-none">
     <nav class="biolife-nav">
         <ul>
             <li class="nav-item"><a href="/" class="permal-link"><?= $trans->getTrans('Home') ?></a></li>
@@ -36,17 +36,36 @@ if(isset($customer['available_payment_methods']) && !empty($customer['available_
     </nav>
 </div>
 
+<!--Hero Section-->
+<div class="hero-section categories-hero-bg" style="margin: 0;">
+    <h1 class="page-title"><?= $trans->getTrans('Payment') ?></h1>
+</div>
+
+<div class="container py-5 px-5 px-md-0">
+    <div class="row">
+        <div class="col">
+            <div class="stepper">
+                <div class="step" data-title="<?= $trans->getTrans('Billing Address') ?>">1</div>
+                <hr />
+                <div class="step" data-title="<?= $trans->getTrans('Shipping method') ?>">2</div>
+                <hr />
+                <div class="step active" data-title="<?= $trans->getTrans('Payment') ?>">3</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="page-contain shopping-cart">
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+            <div class="row gy-5">
+                <div class="col-md-8">
                     <div class="checkout-progress-wrap">
                         <ul class="steps">
                             <li class="step 1st">
                                 <div class="checkout-act active">
-                                    <h3 class="title-box"><span class="number">3</span><?= $trans->getTrans('Payment') ?></h3>
+                                    <h3 class="title-box"><?= $trans->getTrans('Payment') ?></h3>
                                     <div class="box-content">
                                         <div class="login-on-checkout">
                                             <?php if(!empty($available_payment_methods)){ ?>
@@ -60,7 +79,7 @@ if(isset($customer['available_payment_methods']) && !empty($customer['available_
                                                         }
                                                         ?>
                                                     </select>
-                                                    <button type="submit" class="btn btn-primary checkout pull-right" style="margin-top: 45px; "><?= $trans->getTrans('Check out') ?></button>
+                                                    <button type="submit" class="btn btn-primary btn-bold px-3 checkout pull-right" style="margin-top: 45px; "><?= $trans->getTrans('Check out') ?></button>
                                                 </form>
                                             <?php }else{ 
                                                 echo $trans->getTrans('please_ask_admin_for_payment_methods');
@@ -72,7 +91,7 @@ if(isset($customer['available_payment_methods']) && !empty($customer['available_
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
+                <div class="col-md-4">
                     <?php include("order_summary.php");?>
                 </div>
             </div>

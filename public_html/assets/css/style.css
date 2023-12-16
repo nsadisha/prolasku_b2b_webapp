@@ -6319,7 +6319,7 @@ body.open-overlay #overlay {
 }
 
 .checkout-progress-wrap {
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 
 .checkout-progress-wrap .steps {
@@ -6349,6 +6349,7 @@ body.open-overlay #overlay {
     font-weight: 600;
     margin: 0;
     color: #222222;
+    margin-bottom: 1rem;
 }
 
 .checkout-progress-wrap .checkout-act.active .title-box .number {
@@ -6372,7 +6373,7 @@ body.open-overlay #overlay {
 
 .checkout-progress-wrap .checkout-act .box-content {
     display: block;
-    padding-left: 70px;
+    /* padding-left: 70px; */
 }
 
 .checkout-progress-wrap .checkout-act .box-content .txt-desc {
@@ -15231,7 +15232,7 @@ body.open-quickview-block .biolife-quickview-block {
     }
 
     .checkout-progress-wrap .checkout-act .box-content {
-        padding-left: 15px;
+        /* padding-left: 15px; */
         padding-top: 15px;
     }
 
@@ -17694,4 +17695,50 @@ body.open-quickview-block .biolife-quickview-block {
 
 .custom-dropdown:hover ul {
     display: block;
+}
+
+
+.stepper {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stepper .step {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    color: #196d52;
+    border: solid 2px #196d52;
+    cursor: pointer;
+}
+
+.stepper .step::after {
+    position: absolute;
+    content: attr(data-title);
+    color: #196d52;
+    font-size: 13px;
+    display: inline-block;
+    top: 100%;
+    width: 100px;
+    text-align: center;
+    line-height: 105%;
+    padding-top: 1rem;
+}
+
+.stepper .step.active {
+    background-color: #196d52;
+    color: white;
+}
+
+.stepper hr {
+    flex: 1;
+    color: #196d52;
 }

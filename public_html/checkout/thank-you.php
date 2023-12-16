@@ -5,7 +5,7 @@ $trans = new \Hlakioui\Trans\Trans();
 ?>
 <div id="main-content" class="main-content">
     <!--Products Block: Product Tab-->
-    <div class="why-choose-us-block">
+    <div class="why-choose-us-block py-5 bg-white">
         <div class="container text-center">
             <h3 class="box-title"><?= $trans->getTrans('Order confirmed') ?></h3>
             <h4><?= $trans->getTrans('Your order number is') ?></h4>
