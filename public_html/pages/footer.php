@@ -140,7 +140,7 @@ $trans = new \Hlakioui\Trans\Trans();
 </footer>
 
 <!--Footer For Mobile-->
-<div class="mobile-footer">
+<!-- <div class="mobile-footer">
     <div class="mobile-footer-inner">
         <div class="mobile-block block-menu-main">
             <a class="menu-bar menu-toggle btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
@@ -161,7 +161,7 @@ $trans = new \Hlakioui\Trans\Trans();
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="toast bg-primary text-white fade" id="toast-success" data-bs-autohide="true">
     <div class="toast-body">

@@ -13446,7 +13446,7 @@ body.open-quickview-block .biolife-quickview-block {
 
     .biolife-cart-info .minicart-contain a>.sub-total,
     .biolife-cart-info .minicart-contain a>.title {
-        display: none;
+        /* display: none; */
     }
 
     .mobile-footer {
