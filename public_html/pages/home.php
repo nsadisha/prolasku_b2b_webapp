@@ -24,6 +24,61 @@ $categories = $cmsApi->getCategories();
         <div class="container">
             <div class="biolife-tab biolife-tab-contain py-5">
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-5">
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-1.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 1</h4>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-2.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 2</h4>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-3.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 3</h4>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-4.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 4</h4>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-5.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 5</h4>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="category-card" href="products.php?cid=117">
+                                <div class="img-wrapper">
+                                    <div class="rdb"></div>
+                                    <img class="img" src="../assets/images/category-6.png" alt="category image">
+                                </div>
+                                <h4 class="name">Category 6</h4>
+                            </a>
+                        </div>
+
                         <!-- Main content -->
                         <?php foreach($categories as $category) {
                             $_category_name = isset($category['category_name']) ? $trans->getLang($category['category_name'], $lang) : '';

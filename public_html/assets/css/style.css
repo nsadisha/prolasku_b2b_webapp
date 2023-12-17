@@ -17535,16 +17535,20 @@ body.open-quickview-block .biolife-quickview-block {
 .product-card.layout-1 .btns .add-to-cart-btn {
     width: 80%;
     text-transform: uppercase;
-    color: #cccccc;
+    color: #196d52;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
-    border: solid 2px #cccccc;
+    border: solid 2px #196d52;
 }
 
-
+.product-card.layout-1 .btns .add-to-cart-btn:hover {
+    color: white;
+    background-color: #196d52;
+    border-color: #196d52 !important;
+}
 
 /* tile btns */
 .tile-btns {

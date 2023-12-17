@@ -166,8 +166,7 @@
 .slider-opt03__layout01 .buttons .btn-thin:not(:hover),
 .nice-select .option.selected.focus,
 .category-card:hover > .name,
-.product-card .name:hover,
-.product-card.layout-1 .btns .add-to-cart-btn:hover {
+.product-card .name:hover {
     color: #46b793;
 }
 
