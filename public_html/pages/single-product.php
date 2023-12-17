@@ -99,7 +99,7 @@ $trans = new \Hlakioui\Trans\Trans();
                             ?>
                             <input type="hidden" name="__token" value="add_<?php echo $product['pid'] ?>">
                             <div class="quantity-box">
-                                <div class="year-selector">
+                                <div class="year-selector quantity-selector">
                                     <a href="#" class="qty-btn btn-up" id="pd-q-down">
                                         <i class="fa fa-minus" aria-hidden="true"></i>
                                     </a>

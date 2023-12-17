@@ -17621,6 +17621,10 @@ body.open-quickview-block .biolife-quickview-block {
     justify-content: center;
 }
 
+.year-selector a i {
+    pointer-events: none;
+}
+
 .year-selector a:nth-child(2) {
     background-color: #196d52;
     padding: 0.5rem 1rem;
