@@ -3545,26 +3545,53 @@ body.open-mobile-search .header-area.layout-02 {
     margin: 0 0 24px;
 }
 
+.footer .footer-description {
+    width: 90%;
+}
+
+@media only screen and (max-width:768px){
+    .footer .footer-description {
+        width: 100%;
+    }
+}
+
 .footer-phone-info {
-    margin-top: 40px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #46b793;
+    background-color: #196d52;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-phone-info:hover {
+    color: #eeeeee;
+}
+
+@media only screen and (max-width:600px){
+    .footer-phone-info {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .footer-phone-info .biolife-icon {
-    color: #666666;
     font-size: 40px;
     line-height: 1;
     display: inline-block;
-    float: left;
     width: 40px;
-    padding-top: 9px;
 }
 
 .footer-phone-info .r-info {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
-    color: #222222;
     display: inline-block;
-    width: calc(100% - 40px);
     font-weight: 600;
     margin: 0;
     padding-left: 20px;
@@ -3591,6 +3618,10 @@ body.open-mobile-search .header-area.layout-02 {
 
 .footer-phone-info.mode-03 .r-info .number {
     color: #222222;
+}
+
+.footer .bottom-section .footer-bottom-img, .footer .footer-logo img {
+    mix-blend-mode: multiply;
 }
 
 .border-top-type-1 {
@@ -3630,14 +3661,24 @@ body.open-mobile-search .header-area.layout-02 {
     text-align: center;
 }
 
-.payment-methods ul {
+.payment-methods {
     padding: 0;
-    display: block;
+    display: flex;
     text-align: right;
     margin: 0;
+    gap: 0.75rem;
+    justify-content: center;
 }
 
-.payment-methods ul li {
+.payment-methods a {
+    /* padding: 26px 0 29px; */
+}
+
+.payment-methods a img {
+    border-radius: 5px;
+}
+
+/* .payment-methods ul li {
     list-style: none;
     display: inline-block;
     padding: 26px 0 29px;
@@ -3686,7 +3727,7 @@ body.open-mobile-search .header-area.layout-02 {
 
 .footer.layout-01 .payment-methods ul li {
     padding: 29px 0;
-}
+} */
 
 .footer.layout-01 .copy-right-text {
     margin-top: 39px;

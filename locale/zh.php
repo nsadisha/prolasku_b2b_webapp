@@ -152,4 +152,5 @@ return array(
 
 	"Categories"=> "类别",
 	"Login"=>"登录",
+	"Footer_description"=>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim optio eius temporibus sed delectus quisquam minus beatae neque quis laborum sit.",
 );?>

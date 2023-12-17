@@ -8,18 +8,20 @@ $trans = new \Hlakioui\Trans\Trans();
 <footer id="footer" class="footer layout-03">
     <div class="footer-content background-footer-03">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-9">
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-4">
                     <section class="footer-item">
-                        <a href="index-2.html" class="logo footer-logo"><img src="assets/images/logo_footer.png"
-                                                                             alt="logo" width="135" ></a>
-                        <div class="footer-phone-info">
+                        <a href="index-2.html" class="logo footer-logo">
+                            <img src="assets/images/logo.png" alt="logo" width="175" >
+                        </a>
+                        <p class="mt-3 footer-description"><?= $trans->getTrans('Footer_description'); ?></p>
+                        <a href="tel:<?= $trans->getTrans('support_number') ?>" class="footer-phone-info">
                             <i class="biolife-icon icon-head-phone"></i>
                             <p class="r-info">
                                 <span><?= $trans->getTrans('Got Questions ?'); ?></span>
-                                <span><?= $trans->getTrans('support_number'); ?></span>
+                                <span> <?= $trans->getTrans('support_number'); ?></span>
                             </p>
-                        </div>
+                        </a>
                         <!-- <div class="newsletter-block layout-01">
                             <h4 class="title"><?= $trans->getTrans('Newsletter Signup'); ?></h4>
                             <div class="form-content">
@@ -111,27 +113,27 @@ $trans = new \Hlakioui\Trans\Trans();
                     </section>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
+            <hr>
+            <div class="row bottom-section gy-3 py-3 pb-4">
+                <!-- <div class="col-xs-12">
                     <div class="separator sm-margin-top-70px xs-margin-top-40px"></div>
+                </div> -->
+                <div class="col-lg-auto">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <!-- <a href="templateshub.net"><?= $trans->getTrans('Templates Hub'); ?></a></p> -->
+                        <a href="/">
+                            <img src="assets/images/logo_footer.png" alt="logo" width="120" class="footer-bottom-img" >
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-sm-6 col-xs-12">
-                    <div class="copy-right-text"><p><a href="templateshub.net"><?= $trans->getTrans('Templates Hub'); ?></a></p></div>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="col-lg"></div>
+                <div class="col-lg-auto">
                     <div class="payment-methods">
-                        <ul>
-                            <li><a href="#" class="payment-link"><img src="assets/images/card1.jpg" width="51"
-                                                                      height="36" alt=""></a></li>
-                            <li><a href="#" class="payment-link"><img src="assets/images/card2.jpg" width="51"
-                                                                      height="36" alt=""></a></li>
-                            <li><a href="#" class="payment-link"><img src="assets/images/card3.jpg" width="51"
-                                                                      height="36" alt=""></a></li>
-                            <li><a href="#" class="payment-link"><img src="assets/images/card4.jpg" width="51"
-                                                                      height="36" alt=""></a></li>
-                            <li><a href="#" class="payment-link"><img src="assets/images/card5.jpg" width="51"
-                                                                      height="36" alt=""></a></li>
-                        </ul>
+                        <a href="#" class="payment-link"><img src="assets/images/card1.jpg" width="40" alt=""></a>
+                        <a href="#" class="payment-link"><img src="assets/images/card2.jpg" width="40" alt=""></a>
+                        <a href="#" class="payment-link"><img src="assets/images/card3.jpg" width="40" alt=""></a>
+                        <a href="#" class="payment-link"><img src="assets/images/card4.jpg" width="40" alt=""></a>
+                        <a href="#" class="payment-link"><img src="assets/images/card5.jpg" width="40" alt=""></a>
                     </div>
                 </div>
             </div>

@@ -144,4 +144,5 @@ return array(
 
     "Categories"=> "Categories",
     "Login"=>"Login",
+    "Footer_description"=>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim optio eius temporibus sed delectus quisquam minus beatae neque quis laborum sit.",
 );

@@ -135,4 +135,5 @@ return array(
 
 	"Categories"=> "Kategorijos",
 	"Login"=>"Prisijungti",
+	"Footer_description"=>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim optio eius temporibus sed delectus quisquam minus beatae neque quis laborum sit.",
 );?>
