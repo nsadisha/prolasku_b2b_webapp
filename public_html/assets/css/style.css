@@ -17496,7 +17496,7 @@ body.open-quickview-block .biolife-quickview-block {
 .product-card.layout-1 .image {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: contain;
     transition: 0.3s;
 }
 
@@ -17790,4 +17790,12 @@ body.open-quickview-block .biolife-quickview-block {
 .stepper hr {
     flex: 1;
     color: #196d52;
+}
+
+.mobile-quantity{
+    font-size: 18px;
+}
+
+.mobile-quantity strong {
+    color: #222222;
 }

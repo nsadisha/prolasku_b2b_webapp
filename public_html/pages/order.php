@@ -73,7 +73,7 @@ $trans = new \Hlakioui\Trans\Trans();
                                             <a class="prd-name"
                                                href="single-product.php?id=<?php echo $product['pid'] ?>"> <?php echo $item['product_name'][$lang] ?></a>
                                         </td>
-                                        <td class="product-price" data-title="Price">
+                                        <td class="product-price d-none d-md-table-cell" data-title="Price">
                                             <div class="price price-contain">
                                                 <ins><span class="price-amount">
                                                             <?php echo $item["unit_price"] ?>
@@ -82,16 +82,23 @@ $trans = new \Hlakioui\Trans\Trans();
                                                 </ins>
                                             </div>
                                         </td>
-                                        <td class="product-quantity" data-title="Quantity">
-                                                    <span class="price-amount">
-                                                    <?php echo $item["quantity"] ?>
-                                                        </span>
+                                        <td class="product-quantity d-none d-md-table-cell" data-title="Quantity">
+                                            <span class="price-amount">
+                                                <?php echo $item["quantity"] ?>
+                                            </span>
                                         </td>
-                                        <td class="product-subtotal" data-title="Total">
+                                        <td class="product-subtotal d-none d-md-table-cell" data-title="Total">
                                             <div class="price price-contain">
                                                 <ins><span class="price-amount"><span
                                                                 class="currencySymbol"></span><?php echo($item["quantity"] * $item["unit_price"]) ?> <?= $cur?></span>
                                                 </ins>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="mobile-quantity d-block d-md-none">
+                                                <strong class=""><?=$item["unit_price"];?></strong>
+                                                &times; <?php echo $item["quantity"] ?>
+                                                <strong class="ms-3"><?php echo($item["quantity"] * $item["unit_price"]) ?> <?= $cur?></strong>
                                             </div>
                                         </td>
                                     </tr>
