@@ -64,19 +64,29 @@ $trans = new \Hlakioui\Trans\Trans();
                         </div>
 
                         <div class="custom-dropdown ms-3">
-                            <span class="label">Select month</span>
+                            <?php
+                                $begin = (new DateTime($year . '-01-01'))->modify('first day of january');
+                                $end = (new DateTime($year . '-01-01'))->modify('last day of December');
+
+                                $interval = DateInterval::createFromDateString('1 month');
+                                $period = new DatePeriod($begin, $interval, $end);
+
+                                $selected_month = (int) (isset($_GET["m"]) ? $_GET["m"] : "12");
+                                $months = array();
+
+                                foreach ($period as $dtt) {
+                                    array_push($months, $dtt->format("F"));
+                                }
+
+                                $current_selected_month = $months[$selected_month - 1];
+                            ?>
+                            <span class="label"><?= $current_selected_month; ?></span>
                             <ul>
                                 <?php
-                                    $begin = (new DateTime($year . '-01-01'))->modify('first day of january');
-                                    $end = (new DateTime($year . '-01-01'))->modify('last day of December');
-
-                                    $interval = DateInterval::createFromDateString('1 month');
-                                    $period = new DatePeriod($begin, $interval, $end);
-
                                     foreach ($period as $dt) {
                                         ?>
                                         <li class="<?php $dt->format('Y-m') == (new DateTime($year . '-' . $month . '-01'))->format('Y-m') ? print 'active' : print '' ?>">
-                                            <a href="orders.php?m=<?php echo $dt->format("m"); ?>&y=<?php echo $dt->format("Y"); ?>"><?php echo $dt->format("M"); ?></a>
+                                            <a href="orders.php?m=<?php echo $dt->format("m"); ?>&y=<?php echo $dt->format("Y"); ?>"><?php echo $dt->format("F"); ?></a>
                                         </li>
                                         <?php
                                     }
