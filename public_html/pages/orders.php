@@ -80,7 +80,7 @@ $trans = new \Hlakioui\Trans\Trans();
 
                                 $current_selected_month = $months[$selected_month - 1];
                             ?>
-                            <span class="label"><?= $current_selected_month; ?></span>
+                            <span class="label px-3"><?= $current_selected_month; ?></span>
                             <ul>
                                 <?php
                                     foreach ($period as $dt) {
