@@ -17482,7 +17482,7 @@ body.open-quickview-block .biolife-quickview-block {
     }
 }
 
-.product-card.layout-1 {
+.product-card {
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
@@ -17490,12 +17490,12 @@ body.open-quickview-block .biolife-quickview-block {
     border-radius: 12px;
 }
 
-.product-card.layout-1 .image-link {
+.product-card .image-link {
     overflow: hidden;
     border-radius: 6px;
 }
 
-.product-card.layout-1 .image {
+.product-card .image {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: contain;
@@ -17513,6 +17513,13 @@ body.open-quickview-block .biolife-quickview-block {
     text-align: center;
 }
 
+.product-card .category {
+    color: #196d52;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
 .product-card .name {
     color: #222222;
     font-size: 20px;
@@ -17520,6 +17527,19 @@ body.open-quickview-block .biolife-quickview-block {
     text-decoration: none;
     transition: 0.3s;
     line-height: 100%;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 576px) {
+    .product-card .name {
+        white-space: initial;
+        overflow: initial;
+        text-overflow: initial;
+    }
 }
 
 .product-card .price {
@@ -17534,7 +17554,7 @@ body.open-quickview-block .biolife-quickview-block {
     font-size: 14px;
 }
 
-.product-card.layout-1 .btns .add-to-cart-btn {
+.product-card .btns .add-to-cart-btn {
     width: 80%;
     text-transform: uppercase;
     color: #196d52;
@@ -17546,7 +17566,7 @@ body.open-quickview-block .biolife-quickview-block {
     border: solid 2px #196d52;
 }
 
-.product-card.layout-1 .btns .add-to-cart-btn:hover {
+.product-card .btns .add-to-cart-btn:hover {
     color: white;
     background-color: #196d52;
     border-color: #196d52 !important;

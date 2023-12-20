@@ -1,7 +1,8 @@
 <?php 
-foreach ($products as $product) { ?>
+foreach ($products as $product) { 
+    $category_list = $cmsApi->getCategories([$product["cid"]]); ?>
     <div class="col" style="transition: 0.2s;">
-        <div class="product-card layout-1">
+        <div class="product-card">
             <a href="single-product.php?id=<?php echo $product['pid'] ?>" class="image-link">
                 <?php
                     $product_img = "../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png";
@@ -13,7 +14,14 @@ foreach ($products as $product) { ?>
             </a>
             <hr class="text-secondary" />
             <div class="texts">
-                <a href="single-product.php?id=<?=$product['pid']?>" class="name">
+                <span class="category">
+                    <?php
+                        if(isset($category_list)){
+                            echo $trans->getLang($category_list[0]['category_name'], $lang);
+                        }
+                    ?>
+                </span>
+                <a href="single-product.php?id=<?=$product['pid']?>" class="name" title="<?=$trans->getLang($product['product_name'], $lang) ?>">
                     <?=$trans->getLang($product['product_name'], $lang) ?>
                 </a>
                 <p class="price">

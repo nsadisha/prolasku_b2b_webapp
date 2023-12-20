@@ -65,6 +65,13 @@ $trans = new \Hlakioui\Trans\Trans();
             <div class="col-md">
                 <div class="product-attribute">
                     <h3 class="title"><?php echo $trans->getLang($product['product_name'], $lang) ?></h3>
+                    <div class="mt-1"><strong style="color: #196d52;">
+                        <?php
+                            if(isset($categories)){
+                                echo $trans->getLang($categories[0]['category_name'], $lang);
+                            }
+                        ?>
+                    </strong></div>
                     <div class="price pb-2">
                         <ins>
                             <span class="price-amount">                                

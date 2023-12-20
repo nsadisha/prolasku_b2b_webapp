@@ -30,6 +30,8 @@ $product = $cmsApi->getProductById($id);
 $product = $product[key($product)];
 // $cmsApi->pr($product);
 define('TITLE', $trans->getLang($product['product_name'], $lang));
+
+$categories = $cmsApi->getCategories([$product["cid"]]);
 ?>
 
 <!DOCTYPE html>
