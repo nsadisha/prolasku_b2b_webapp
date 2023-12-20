@@ -24,7 +24,8 @@ $trans = new \Hlakioui\Trans\Trans();
         <!-- Main content -->
         <div class="row gy-2 py-5 sumary-product">
             <div class="col-md-6">
-                <div>
+                <div class="single-product-images">
+                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
                     <div class="media">
                         <ul class="biolife-carousel slider-for"
                             data-slick='{"arrows":false,"dots":false,"slidesMargin":30,"slidesToShow":1,"slidesToScroll":1,"fade":true,"asNavFor":".slider-nav"}'>
@@ -32,17 +33,17 @@ $trans = new \Hlakioui\Trans\Trans();
                             if ($product['images']) {
                                 foreach ($product['images'] as $image) {
                                     ?>
-                                    <li><img src="<?php echo $image['URL'] ?>" alt="" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;"></li>
+                                    <li><img src="<?php echo $image['URL'] ?>" alt="" style="width: 100%; aspect-ratio: 1 / 1; object-fit: contain;"></li>
                                     <?php
                                 }
                             } else {
                                 ?>
-                                <li><img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;"></li>
+                                    <li><img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="" style="width: 100%; aspect-ratio: 1 / 1; object-fit: contain;"></li>
                                 <?php
                             }
                             ?>
                         </ul>
-                        <ul class="biolife-carousel slider-nav"
+                        <ul class="biolife-carousel slider-nav mx-auto"
                             data-slick='{"arrows":false,"dots":false,"centerMode":false,"focusOnSelect":true,"slidesMargin":10,"slidesToShow":4,"slidesToScroll":1,"asNavFor":".slider-for"}'>
                             <?php
                             if ($product['images']) {
@@ -53,7 +54,7 @@ $trans = new \Hlakioui\Trans\Trans();
                                 }
                             } else {
                                 ?>
-                                <li><img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="" wwidth="88" height="88"></li>
+                                    <li><img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="" wwidth="88" height="88"></li>
                                 <?php
                             }
                             ?>

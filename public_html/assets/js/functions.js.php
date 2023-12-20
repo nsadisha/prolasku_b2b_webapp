@@ -667,7 +667,14 @@
 
     $('#mobile-filter-toggle').on('click', function() {
         $('body').trigger('open-overlay', ['open-mobile-filter']);
+    })
 
+    // open single product overlay
+    $('.single-product-images .biolife-carousel.slider-for').on('click', function() {
+        $('.single-product-images').addClass("overlay");
+    })
+    $('.single-product-images .btn-close').on('click', function() {
+        $('.single-product-images').removeClass("overlay");
     })
 
 })(jQuery);
