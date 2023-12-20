@@ -1,8 +1,14 @@
 <?php 
-foreach ($products as $product) { 
+foreach ($products as $product) {
     $category_list = $cmsApi->getCategories([$product["cid"]]); ?>
     <div class="col" style="transition: 0.2s;">
         <div class="product-card">
+            <?php
+                if($product['price'] != $product['price_net_after_discount']){
+                    echo '<span class="sale-tag">' . $trans->getTrans("Sale") . '</span>';
+                }
+            ?>
+            
             <a href="single-product.php?id=<?php echo $product['pid'] ?>" class="image-link">
                 <?php
                     $product_img = "../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png";
