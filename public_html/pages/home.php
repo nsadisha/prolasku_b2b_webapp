@@ -83,7 +83,7 @@ $categories = $cmsApi->getCategories();
                         <?php foreach($categories as $category) {
                             $_category_name = isset($category['category_name']) ? $trans->getLang($category['category_name'], $lang) : '';
                             if(empty($_category_name)) {continue;}
-                            $_category_img = isset($category["image"]) ? $category["image"] : '../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png';
+                            $_category_img = isset($category["image"]) && $category["image"] != "" ? $category["image"] : '../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png';
                             $_cid = $category['cid'];
                             ?>
 
