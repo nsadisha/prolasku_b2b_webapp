@@ -70,57 +70,61 @@ $trans = new \Hlakioui\Trans\Trans();
 
     <div class="header-middle biolife-sticky-object">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container py-2 py-md-3">
-                <a class="navbar-brand" href="/">
-                    <img src="assets/images/logo.png" alt="logo" width="150" >
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container py-2 py-md-3 justify-content-start">
+                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/"><?= $trans->getTrans('Home'); ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.php"><?= $trans->getTrans('Products List'); ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="orders.php"><?= $trans->getTrans('Order History'); ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="checkout.php"><?= $trans->getTrans('checkout'); ?></a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <?php if(isset($_SESSION['user_id'])){ ?>
-                    <div class="biolife-cart-info mx-auto">
-                        <div class="minicart-block">
-                            <div class="minicart-contain">
-                                <a href="javascript:void(0)" class="link-to">
-                                            <span class="icon-qty-combine">
-                                                <i class="icon-cart-mini biolife-icon"></i>
-                                                <span id="total_qty" class="qty">0</span>
-                                            </span>
-                                    <span class="title"><?= $trans->getTrans('Cart'); ?> </span>
-                                    <span id="total_price" class="sub-total">0.00 <?php echo $cur ?></span>
-                                </a>
-                                <div class="cart-content">
-                                    <div class="cart-inner">
-                                        <ul id="cart_details" class="products">
-                                            <li><?=$trans->getTrans('cart_empty');?></li>
-                                        </ul>
-                                        <p class="btn-control">
-                                            <a href="cart.php" class="btn view-cart"><?= $trans->getTrans('view cart'); ?></a>
-                                            <a href="checkout.php" class="btn"><?= $trans->getTrans('checkout'); ?></a>
-                                        </p>
+                <a class="navbar-brand ms-3 order-2" href="/">
+                    <img src="assets/images/logo.png" alt="logo" width="150" >
+                </a>
+
+                <div class="ms-auto order-3 order-lg-4">
+                    <form class="d-flex">
+                        <?php if(isset($_SESSION['user_id'])){ ?>
+                        <div class="biolife-cart-info mx-auto">
+                            <div class="minicart-block">
+                                <div class="minicart-contain">
+                                    <a href="javascript:void(0)" class="link-to">
+                                                <span class="icon-qty-combine">
+                                                    <i class="icon-cart-mini biolife-icon"></i>
+                                                    <span id="total_qty" class="qty">0</span>
+                                                </span>
+                                        <span class="title"><?= $trans->getTrans('Cart'); ?> </span>
+                                        <span id="total_price" class="sub-total">0.00 <?php echo $cur ?></span>
+                                    </a>
+                                    <div class="cart-content">
+                                        <div class="cart-inner">
+                                            <ul id="cart_details" class="products">
+                                                <li><?=$trans->getTrans('cart_empty');?></li>
+                                            </ul>
+                                            <p class="btn-control">
+                                                <a href="cart.php" class="btn view-cart"><?= $trans->getTrans('view cart'); ?></a>
+                                                <a href="checkout.php" class="btn"><?= $trans->getTrans('checkout'); ?></a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php } ?>
-                </form>
+                        <?php } ?>
+                    </form>
+                </div>
+
+                <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/"><?= $trans->getTrans('Home'); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.php"><?= $trans->getTrans('Products List'); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="orders.php"><?= $trans->getTrans('Order History'); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="checkout.php"><?= $trans->getTrans('checkout'); ?></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

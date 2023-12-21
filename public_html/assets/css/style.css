@@ -13490,7 +13490,7 @@ body.open-quickview-block .biolife-quickview-block {
 
     .biolife-cart-info .minicart-contain a>.sub-total,
     .biolife-cart-info .minicart-contain a>.title {
-        /* display: none; */
+        display: none;
     }
 
     .mobile-footer {
@@ -14775,7 +14775,7 @@ body.open-quickview-block .biolife-quickview-block {
 
     .biolife-cart-info .minicart-block .cart-content {
         width: auto;
-        right: -52px;
+        right: 0;
     }
 
     .biolife-cart-info .minicart-block .cart-inner {
@@ -15657,6 +15657,16 @@ body.open-quickview-block .biolife-quickview-block {
 
     .main-slide .slick-arrow {
         display: none !important;
+    }
+
+    .biolife-cart-info .minicart-block .cart-content {
+        width: 95vw;
+        right: 0;
+    }
+
+    .biolife-cart-info .minicart-block .cart-inner {
+        width: 100%;
+        padding-left: 10px;
     }
 }
 
