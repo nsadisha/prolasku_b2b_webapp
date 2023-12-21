@@ -1,7 +1,7 @@
 <!--Hero Section-->
-<div class="hero-section hero-background" style="margin: 0;">
+<!-- <div class="hero-section hero-background" style="margin: 0;">
     <h1 class="page-title"><?= $trans->getTrans('Authentication') ?></h1>
-</div>
+</div> -->
 
 <?php if(isset($_SESSION['user_id'])){ ?>
 <!--Navigation section-->
