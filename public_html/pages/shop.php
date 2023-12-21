@@ -65,42 +65,39 @@ $trans = new \Hlakioui\Trans\Trans();
                                     </div>
                                     <div class="widget biolife-filter ">
                                         <h4 class="wgt-title"><?= $trans->getTrans('Categories:'); ?> </h4>
-                                        <div class="wgt-content cat_scrollbar"
-                                            style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
-                                            <ul class="categories check-list multiple">
-                                                <?php foreach ($categories as $category) {
+                                        <div class="wgt-content cat_scrollbar categories" style="max-height: 340px;overflow-y: scroll;margin: 15px 0; padding-left: 1rem;">
+                                            <?php foreach ($categories as $category) {
                                                     if (isset($category['category_name'])) {
                                                         ?>
-                                                        <li class="check-list-item <?=isset($_GET['cid'])&&$_GET['cid']==$category['cid']?'selected':''?>"
-                                                            data-id="<?php echo $category['cid'] ?>">
-                                                            <a href="#" style="text-decoration: none; font-weight:600;"
-                                                            class="check-link"><?=$trans->getLang($category['category_name'], $lang) ?></a>
-                                                        </li>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="categories" value="<?= $category['cid'] ?>" id="cid-<?= $category['cid'] ?>" 
+                                                                    <?=isset($_GET['cid'])&&$_GET['cid']==$category['cid']?'checked':''?>>
+                                                                <label class="form-check-label" for="cid-<?= $category['cid'] ?>">
+                                                                    <?=$trans->getLang($category['category_name'], $lang) ?>
+                                                                </label>
+                                                            </div>
                                                         <?php
                                                     }
                                                 }
-                                                ?>
-                                            </ul>
+                                            ?>
                                         </div>
                                     </div>
                                     <div class="widget biolife-filter scrollbar pb-0">
                                         <h4 class="wgt-title"><?= $trans->getTrans('Brands:'); ?> </h4>
-                                        <div class="wgt-content brand_scrollbar"
-                                            style="max-height: 340px;overflow-y: scroll;margin: 15px 0;">
-                                            <ul class="brands check-list multiple">
-                                                <?php foreach ($brands as $brand) {
-                                                    if (isset($brand['brand_name'])) {
-                                                        ?>
-                                                        <li class="check-list-item"
-                                                            data-id="<?php echo $brand['bid'] ?>">
-                                                            <a href="#" style="text-decoration: none; font-weight:600;"
-                                                            class="check-link"><?=$trans->getLang($brand['brand_name'], $lang) ?></a>
-                                                        </li>
-                                                        <?php
-                                                    }
+                                        <div class="wgt-content brand_scrollbar brands" style="max-height: 340px;overflow-y: scroll;margin: 15px 0; padding-left: 1rem;">
+                                            <?php foreach ($brands as $brand) {
+                                                if (isset($brand['brand_name'])) {
+                                                    ?>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="brands" value="<?= $brand['bid'] ?>" id="bid-<?= $brand['bid'] ?>" 
+                                                                <?=isset($_GET['bid'])&&$_GET['bid']==$brand['bid']?'checked':''?>>
+                                                            <label class="form-check-label" for="bid-<?= $brand['bid'] ?>">
+                                                                <?=$trans->getLang($brand['brand_name'], $lang) ?>
+                                                            </label>
+                                                        </div>
+                                                    <?php
                                                 }
-                                                ?>
-                                            </ul>
+                                            } ?>
                                         </div>
                                     </div>
                                 </form>

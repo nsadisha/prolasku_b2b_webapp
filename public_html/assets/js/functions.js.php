@@ -538,43 +538,56 @@
     function filter() {
         const search = $('.product-search').val();
 
-            const catIDs = new Array();
-            let i = 0;
-            $(".categories .check-list-item.selected").each(function () {
-                catIDs[i++] = $($(this).data('id'));
+        const catIDs = new Array();
+
+        $('#filter-form .categories .form-check input[name="categories"]:checked').each(function() {
+            catIDs.push({
+                "0": Number($(this).val())
             });
+        });
 
-            const brandIDs = new Array();
-            let j = 0;
-            $(".brands .check-list-item.selected").each(function () {
-                brandIDs[j++] = $($(this).data('id'));
+        const brandIDs = new Array();
+
+        $('#filter-form .brands .form-check input[name="brands"]:checked').each(function() {
+            brandIDs.push({
+                "0": Number($(this).val())
             });
+        });
+        
+        toggleLoadingScreen();
 
-            $body.trigger('close-overlay', ['open-mobile-filter']);
+        $body.trigger('close-overlay', ['open-mobile-filter']);
 
-            $.ajax({
-                type: "POST",
-                url: "get-product.php",
-                data: {
-                    search: search,
-                    cats: JSON.stringify(catIDs),
-                    bids: JSON.stringify(brandIDs),
-                },
-                success: function (data) {
-                    products.html(data);
-                    var el = $(".products-list").children().length;
-                    if (el < 20) {
-                        $('#product-load-more').prop("disabled", true);
-                    } else {
-                        $('#product-load-more').prop("disabled", false);
-                    }
-                    // console.log(window.location.pathname)
-                    change_url(window.location.pathname, true);
-                },
-                error: function (req, status, error) {
-                    products.append("Error try again");
+        $.ajax({
+            type: "POST",
+            url: "get-product.php",
+            data: {
+                search: search,
+                cats: JSON.stringify(catIDs),
+                bids: JSON.stringify(brandIDs),
+            },
+            success: function (data) {
+                products.html(data);
+                var el = $(".products-list").children().length;
+                if (el < 20) {
+                    $('#product-load-more').prop("disabled", true);
+                } else {
+                    $('#product-load-more').prop("disabled", false);
                 }
-            });
+                // console.log(window.location.pathname)
+                change_url(window.location.pathname, true);
+            },
+            error: function (req, status, error) {
+                products.append("Error try again");
+            },
+            complete: function () {
+                toggleLoadingScreen();
+            }
+        });
+    }
+
+    function toggleLoadingScreen() {
+        $('.loading-overlay').toggleClass('show');
     }
 
     $('.is-different-address').on('change', function () {

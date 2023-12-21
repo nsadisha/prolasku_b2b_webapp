@@ -72,6 +72,8 @@ include('pages/footer.php');
 <!-- Scroll Top Button -->
 <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
 
+<div class="loading-overlay"></div>
+
 <?php
 include('html/footer.php');
 ?>

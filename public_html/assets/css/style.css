@@ -4050,6 +4050,17 @@ body.open-overlay #overlay {
     padding-bottom: 15px;
 }
 
+#sidebar .sidebar-contain .form-check .form-check-label {
+    color: #222222 !important;
+    cursor: pointer !important;
+    font-weight: 600;
+}
+
+#sidebar .sidebar-contain .form-check .form-check-input:checked {
+    background-color: #196d52 !important;
+    border-color: #196d52 !important;
+}
+
 .sidebar .widget:last-child {
     border-bottom: none;
 }
@@ -17906,4 +17917,26 @@ body.open-quickview-block .biolife-quickview-block {
     .single-product-images.overlay .media {
         max-width: 95vw;
     }
+}
+
+.loading-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8) url('../images/loading.svg');
+    background-position: center center;
+    background-size: 3rem 3rem;
+    background-repeat: no-repeat;
+    z-index: 900;
+    transition: 0.3s;
+
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loading-overlay.show {
+    visibility: visible;
+    pointer-events: all;
 }
