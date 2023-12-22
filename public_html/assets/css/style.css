@@ -17531,7 +17531,7 @@ body.open-quickview-block .biolife-quickview-block {
 .product-card .texts {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -17540,6 +17540,7 @@ body.open-quickview-block .biolife-quickview-block {
     font-size: 14px;
     font-weight: 600;
     margin-top: 0.3rem;
+    line-height: 100%;
 }
 
 .product-card .name {
@@ -17570,6 +17571,7 @@ body.open-quickview-block .biolife-quickview-block {
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
+    line-height: 100%;
 }
 
 .product-card .price del {
