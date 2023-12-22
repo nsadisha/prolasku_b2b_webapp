@@ -1,6 +1,5 @@
 <?php 
-foreach ($products as $product) {
-    $category_list = $cmsApi->getCategories([$product["cid"]]); ?>
+foreach ($products as $product) { ?>
     <div class="col" style="transition: 0.2s;">
         <div class="product-card">
             <?php
@@ -22,8 +21,13 @@ foreach ($products as $product) {
             <div class="texts">
                 <span class="category">
                     <?php
-                        if(isset($category_list)){
-                            echo $trans->getLang($category_list[0]['category_name'], $lang);
+                        $cat1 = $cmsApi->getCategoryByCid($categories, $product["cid"]);
+                        $cat2 = $cmsApi->getCategories([$product["cid"]]);
+                        
+                        if($cat1 != null){
+                            echo $trans->getLang($cat1['category_name'], $lang);
+                        }else if(isset($cat2[0])){
+                            echo $trans->getLang($cat2[0]['category_name'], $lang);
                         }
                     ?>
                 </span>

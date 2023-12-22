@@ -885,4 +885,13 @@ class CmsApi
         if($_exit) exit;
     }
 
+    public function getCategoryByCid($array, $targetCid) {
+        foreach ($array as $element) {
+            if (isset($element['cid']) && $element['cid'] === $targetCid) {
+                return $element;
+            }
+        }
+        return null;
+    }
+
 }

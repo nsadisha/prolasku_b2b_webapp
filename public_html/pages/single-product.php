@@ -3,6 +3,9 @@ $cur = $cmsApi->getMainCurrency();
 $language = $cmsApi->getMainLang();
 $lang = $language['code'];
 $trans = new \Hlakioui\Trans\Trans();
+$categories = $cmsApi->getCategories();
+
+$cat = $cmsApi->getCategoryByCid($categories, $product["cid"]) ?>
 ?>
 <!--Hero Section-->
 <div class="hero-section categories-hero-bg" style="margin: 0;">
@@ -67,8 +70,8 @@ $trans = new \Hlakioui\Trans\Trans();
                     <h3 class="title"><?php echo $trans->getLang($product['product_name'], $lang) ?></h3>
                     <div class="mt-1"><strong style="color: #196d52;">
                         <?php
-                            if(isset($categories)){
-                                echo $trans->getLang($categories[0]['category_name'], $lang);
+                            if($cat != null){
+                                echo $trans->getLang($cat['category_name'], $lang);
                             }
                         ?>
                     </strong></div>
