@@ -11,8 +11,12 @@ foreach ($products as $product) { ?>
             <a href="single-product.php?id=<?php echo $product['pid'] ?>" class="image-link">
                 <?php
                     $product_img = "../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png";
+                    
+                    // some arrays start with 1
                     if ($product['images'] && $product['images']['0']) {
                         $product_img = $product['images']['0']['URL'];
+                    }else if ($product['images'] && $product['images']['1']) {
+                        $product_img = $product['images']['1']['URL'];
                     }
                 ?>
                 <img src="<?= $product_img ?>" alt="Vegetables" class="image">
