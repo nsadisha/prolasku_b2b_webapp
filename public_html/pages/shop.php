@@ -9,6 +9,7 @@ $categories = $cmsApi->getCategories();
 $brands = $cmsApi->getBrands();
 $trans = new \Hlakioui\Trans\Trans();
 
+$catList = $cmsApi->getCategories();
 ?>
 
 <!--Hero Section-->

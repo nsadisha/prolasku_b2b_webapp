@@ -25,7 +25,7 @@ foreach ($products as $product) { ?>
             <div class="texts">
                 <span class="category">
                     <?php
-                        $cat1 = $cmsApi->getCategoryByCid($categories, $product["cid"]);
+                        $cat1 = $cmsApi->getCategoryByCid($catList, $product["cid"]);
                         $cat2 = $cmsApi->getCategories([$product["cid"]]);
                         
                         if($cat1 != null){

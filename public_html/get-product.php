@@ -14,6 +14,7 @@ if (isset($_POST))
     $cmsApi = new \Hlakioui\API\CmsApi();
     $cur = $cmsApi->getMainCurrency();
     $language = $cmsApi->getMainLang();
+    $catList = $cmsApi->getCategories();
     $lang = $language['code'];
 
     $page = $_POST['page'] ?? 0;
