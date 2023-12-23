@@ -17541,6 +17541,11 @@ body.open-quickview-block .biolife-quickview-block {
     font-weight: 600;
     margin-top: 0.3rem;
     line-height: 100%;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-card .name {
@@ -17559,7 +17564,7 @@ body.open-quickview-block .biolife-quickview-block {
 }
 
 @media only screen and (max-width: 576px) {
-    .product-card .name {
+    .product-card .name, .product-card .category {
         white-space: initial;
         overflow: initial;
         text-overflow: initial;
@@ -17607,6 +17612,7 @@ body.open-quickview-block .biolife-quickview-block {
     border-radius: 100px;
     font-size: 14px;
     font-weight: 600;
+    z-index: 100;
 }
 
 /* tile btns */
