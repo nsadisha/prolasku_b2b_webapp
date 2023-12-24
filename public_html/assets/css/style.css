@@ -17491,6 +17491,7 @@ body.open-quickview-block .biolife-quickview-block {
     font-size: 23px;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
 }
 
 @keyframes rdb-rotate {
