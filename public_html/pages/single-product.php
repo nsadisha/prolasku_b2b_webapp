@@ -5,7 +5,7 @@ $lang = $language['code'];
 $trans = new \Hlakioui\Trans\Trans();
 $categories = $cmsApi->getCategories();
 
-$cat = $cmsApi->getCategoryByCid($categories, $product["cid"]) ?>
+$cat = $cmsApi->getCategoryByCid($categories, $product["cid"]);
 ?>
 <!--Hero Section-->
 <div class="hero-section categories-hero-bg" style="margin: 0;">

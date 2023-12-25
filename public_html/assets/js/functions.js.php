@@ -278,7 +278,8 @@
     });
 
 
-    $(document).on('click', '.add_to_cart', function () {
+    $(document).on('click', '.add_to_cart', function (e) {
+        e.preventDefault();
         const form = $(this).closest('form');
         // console.log(form.serialize());
         $.ajax({
