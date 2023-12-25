@@ -1289,6 +1289,10 @@ body {
     padding-bottom: 10px;
 }
 
+.header-area .header-top {
+    overflow: hidden;
+}
+
 body.open-mobile-search .header-area.layout-02 {
     z-index: 150;
 }
