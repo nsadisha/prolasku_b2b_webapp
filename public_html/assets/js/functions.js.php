@@ -401,7 +401,6 @@
         e.preventDefault();
         var product_id = $(this).data("id");
         var qty = $(this).closest('.cart_item').find('.qty').val();
-        console.log(qty);
         $.ajax({
             url: "cart-update-item.php",
             method: "POST",

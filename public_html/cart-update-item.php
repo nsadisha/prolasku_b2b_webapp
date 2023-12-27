@@ -17,7 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = $_POST['name'] ?? '';
         $price = isset($_POST['price']) ? (float)$_POST['price'] : 0;
         $qty = (int)$_POST['qty'];
-        $cart->updateDate($pid, $qty, $name, $price);
+
+        if($qty < 1){
+            $cart->removeItem($pid);
+        }else{
+            $cart->updateDate($pid, $qty, $name, $price);
+        }
         
         exit(json_encode(['response_type'=>'success', 'response_message'=>$trans->getTrans('success')]));
     }

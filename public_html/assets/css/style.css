@@ -6124,30 +6124,36 @@ body.open-overlay #overlay {
     position: relative;
     font-size: 0;
     line-height: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: left;
 }
 
 .shopping-cart-container table td.product-thumbnail .prd-thumb {
-    display: inline-block;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.shopping-cart-container table td.product-thumbnail .prd-thumb img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
 }
 
 .shopping-cart-container table td.product-thumbnail .prd-name {
     font-size: 17px;
     font-weight: 600;
     color: #222222;
-    display: inline-block;
-    width: calc(100% - 115px);
-    padding-left: 10px;
+    /* padding-left: 10px; */
     line-height: 1;
     vertical-align: middle;
 }
 
 .shopping-cart-container table td.product-thumbnail .action {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    bottom: 30px;
-    left: 113px;
-    padding-left: 5px;
+    cursor: pointer;
+    padding-top: 1rem;
     z-index: 5;
 }
 
@@ -6156,7 +6162,7 @@ body.open-overlay #overlay {
     display: inline-block;
     color: #444444;
     line-height: 16px;
-    padding: 0 5px;
+    /* padding: 0 5px; */
 }
 
 .shopping-cart-container table td.product-thumbnail .action a:hover {
@@ -14687,6 +14693,11 @@ body.open-quickview-block .biolife-quickview-block {
         padding-top: 26px;
     }
 
+    .shopping-cart-container table td.product-thumbnail .prd-thumb {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
     .shopping-cart-container table.cart-form td.product-thumbnail .prd-name {
         padding: 0;
         width: 100%;
@@ -14694,16 +14705,12 @@ body.open-quickview-block .biolife-quickview-block {
     }
 
     .shopping-cart-container table.cart-form td.product-thumbnail .action {
-        padding: 5px;
-        top: 0;
-        right: 0;
-        left: auto;
-        bottom: auto;
+        padding-top: 1rem;
     }
 
     .shopping-cart-container table.cart-form td.product-thumbnail .action a {
         padding: 3px 5px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 
     .shopping-cart-container table.cart-form tr.wrap-buttons {

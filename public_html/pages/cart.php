@@ -55,30 +55,34 @@ $trans = new \Hlakioui\Trans\Trans();
                                         ?>
                                         <tr class="cart_item">
                                             <td class="product-thumbnail" data-title="Product Name">
-                                                <a class="prd-thumb" href="single-product.php?id=<?php echo $product['pid'] ?>">
-                                                    <figure>
-                                                        <?php
-                                                        if ($product['images'] && $product['images']['0']) {
-                                                            ?>
-                                                            <img src="<?php echo $product['images']['0']['URL'] ?>"
-                                                                 alt="Vegetables"
-                                                                 width="100"
-                                                                 height="100" class="product-thumnail">
+                                                <div class="row column-gap-3">
+                                                    <div class="col-md-3">
+                                                        <a class="prd-thumb" href="single-product.php?id=<?php echo $product['pid'] ?>">
                                                             <?php
-                                                        } else {
+                                                            if ($product['images'] && $product['images']['0']) {
+                                                                ?>
+                                                                <img src="<?php echo $product['images']['0']['URL'] ?>"
+                                                                        alt="Vegetables" class="product-thumnail">
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="Vegetables"
+                                                                        width="100"
+                                                                        height="100" class="product-thumnail">
+                                                                <?php
+                                                            }
                                                             ?>
-                                                            <img src="../assets/images/Image_COMMING_SOON-NEW-PROLASKU-1024.png" alt="Vegetables"
-                                                                 width="100"
-                                                                 height="100" class="product-thumnail">
-                                                            <?php
-                                                        }
-                                                        ?>                                                    </figure>
-                                                </a>
-                                                <a class="prd-name"
-                                                   href="single-product.php?id=<?php echo $product['pid'] ?>"> <?php echo $product['product_name'][$lang] ?></a>
-                                                <div class="action">
-                                                    <a data-id="<?php echo $product['pid'] ?>" class="remove"><i
-                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <a class="prd-name"
+                                                        href="single-product.php?id=<?php echo $product['pid'] ?>"> <?php echo $product['product_name'][$lang] ?></a>
+                                                        <div class="action">
+                                                            <a data-id="<?php echo $product['pid'] ?>" class="remove">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td class="product-price" data-title="Price">
