@@ -297,6 +297,9 @@
                     if(returned_data.response_type=='success'){
                         load_cart_data();
                         toastr.success("<?=$trans->getTrans('Item has been Added into Cart')?>");
+
+                        //show cart on add
+                        toggleFloatingCart('show');
                     }else{
                         toastr.error(returned_data.response_message);
                     }
@@ -444,6 +447,7 @@
             dataType: "json",
             success: function (data) {
                 $('#cart_details').html(data.cart_details);
+                $('#floating-cart-items').html(data.cart_details);
                 $('#total_price').text(data.total_price);
                 $('#total_qty').text(data.total_item);
             }
@@ -689,6 +693,10 @@
     $('.single-product-images .btn-close').on('click', function() {
         $('.single-product-images').removeClass("overlay");
     })
+
+    function toggleFloatingCart(mode = 'toggle') {
+        $('#floating-cart-modal').modal(mode);
+    }
 
 })(jQuery);
 </script>

@@ -74,6 +74,9 @@ include('pages/footer.php');
 
 <div class="loading-overlay"></div>
 
+<!-- Floating cart -->
+<?php include('pages/floating-cart.php'); ?>
+
 <?php
 include('html/footer.php');
 ?>

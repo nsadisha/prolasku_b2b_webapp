@@ -17960,3 +17960,47 @@ body.open-quickview-block .biolife-quickview-block {
     visibility: visible;
     pointer-events: all;
 }
+
+#floating-cart-modal .modal-content {
+    overflow-x: hidden;
+}
+
+#floating-cart-modal .modal-body {
+    border-top: solid #46b793 3px;
+}
+
+#floating-cart-modal .cart-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+#floating-cart-modal .cart-item-list li {
+    display: flex;
+    gap: 0.25rem;
+}
+
+#floating-cart-modal .cart-item-list li .minicart-item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 0.25rem;
+}
+
+#floating-cart-modal .cart-item-list li .minicart-item img {
+    min-width: 90px;
+    width: 90px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+#floating-cart-modal .cart-item-list li .minicart-item .action {
+    position: relative !important;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    top: 0 !important;
+}
