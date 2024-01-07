@@ -17967,6 +17967,8 @@ body.open-quickview-block .biolife-quickview-block {
 
 #floating-cart-modal .modal-body {
     border-top: solid #46b793 3px;
+    max-height: 75vh;
+    overflow-y: auto;
 }
 
 #floating-cart-modal .cart-item-list {
@@ -18003,4 +18005,9 @@ body.open-quickview-block .biolife-quickview-block {
     margin-left: auto;
     cursor: pointer;
     top: 0 !important;
+}
+
+#floating-cart-modal .modal-content .modal-footer .checkout-btn {
+    color: #666666;
+    background-color: #eeeeee;
 }
