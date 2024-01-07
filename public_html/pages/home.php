@@ -20,7 +20,7 @@ $categories = $cmsApi->getCategories();
 
 <div id="main-content" class="main-content">
     <!--Products Block: Product Tab-->
-    <div>
+    <div style="width: 100vw; overflow-x: hidden;">
         <div class="container">
             <div class="biolife-tab biolife-tab-contain py-5">
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gy-5">

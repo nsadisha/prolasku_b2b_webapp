@@ -1290,7 +1290,7 @@ body {
 }
 
 .header-area .header-top {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body.open-mobile-search .header-area.layout-02 {
